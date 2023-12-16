@@ -3516,7 +3516,7 @@
 <p>Conductor does not run the workers.  When a task is scheduled, it is put into the queue maintained by Conductor.  Workers are required to poll for tasks using <code>/tasks/poll</code> API at periodic interval, execute the business logic for the task and report back the results using <code>POST /api/tasks</code> API call. 
 Conductor, however will run <a href="../documentation/configuration/workflowdef/systemtasks/index.html">system tasks</a> on the Conductor server.</p>
 <h2 id="how-can-i-schedule-workflows-to-run-at-a-specific-time">How can I schedule workflows to run at a specific time?</h2>
-<p>Swift Conductor itself does not provide any scheduling mechanism.  But there is a community project <a href="https://github.com/jas34/scheduledwf"><em>Schedule Conductor Workflows</em></a> which provides workflow scheduling capability as a pluggable module as well as workflow server.
+<p>Conductor itself does not provide any scheduling mechanism.  But there is a community project <a href="https://github.com/jas34/scheduledwf"><em>Schedule Conductor Workflows</em></a> which provides workflow scheduling capability as a pluggable module as well as workflow server.
 Other way is you can use any of the available scheduling systems to make REST calls to Conductor to start a workflow.  Alternatively, publish a message to a supported eventing system like SQS to trigger a workflow.<br />
 More details about <a href="../documentation/configuration/eventhandlers.html">eventing</a>.</p>
 <h2 id="how-do-i-setup-dynomite-cluster">How do I setup Dynomite cluster?</h2>
@@ -3617,7 +3617,7 @@ More details about <a href="../documentation/configuration/eventhandlers.html">e
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2023 Swift Software Group <br>(Before Dec 15, 2023, &copy; Netflix OSS)
+      &copy; 2023 Swift Software Group <br>(Contents before Dec 13, 2023, &copy; Netflix OSS)
     </div>
   
   
