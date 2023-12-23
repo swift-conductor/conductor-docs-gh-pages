@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://swiftconductor.com/devguide/running/source.html">
+        <link rel="canonical" href="https://swiftconductor.com/devguide/running/redis.html">
       
       
-        <link rel="prev" href="../concepts/why.html">
-      
-      
-        <link rel="next" href="docker.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +20,7 @@
     
     
       
-        <title>Building Conductor From Source - Conductor Documentation</title>
+        <title>Redis - Conductor Documentation</title>
       
     
     
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#building-conductor-from-source" class="md-skip">
+        <a href="#redis" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Building Conductor From Source
+              Redis
             
           </span>
         </div>
@@ -203,20 +199,16 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../concepts/index.html" class="md-tabs__link">
           
   
@@ -356,10 +348,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -384,12 +374,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -403,7 +393,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Developer's Guide
@@ -567,10 +557,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -584,12 +572,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -603,7 +591,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Running Conductor
@@ -614,30 +602,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Building Conductor From Source
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="source.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="source.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,125 +614,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#build-and-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build and Run
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Build and Run">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#steps-to-build-conductor-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Steps to build Conductor Server
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Steps to build Conductor Server">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-checkout-the-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Checkout the code
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-build-and-run-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Build and run Server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#download-and-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      Download and Run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-and-run-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build and Run UI
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Build and Run UI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conductor-ui-from-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conductor UI from Source
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3378,113 +3227,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#build-and-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build and Run
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Build and Run">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#steps-to-build-conductor-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Steps to build Conductor Server
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Steps to build Conductor Server">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-checkout-the-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Checkout the code
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-build-and-run-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Build and run Server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#download-and-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      Download and Run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build-and-run-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build and Run UI
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Build and Run UI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conductor-ui-from-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conductor UI from Source
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3501,80 +3243,20 @@
   
 
 
-<h1 id="building-conductor-from-source">Building Conductor From Source</h1>
-<h2 id="build-and-run">Build and Run</h2>
-<p>In this article we will explore how you can set up Conductor on your local machine for trying out some of its
-features.</p>
-<h3 id="prerequisites">Prerequisites</h3>
-<ol>
-<li>JDK 17 or greater</li>
-<li>(Optional) Docker if you want to run tests.  You can install docker from <a href="https://www.docker.com/get-started/">here</a>.</li>
-<li>Node for building and running UI.  Instructions at <a href="https://nodejs.org">https://nodejs.org</a>.</li>
-<li>Yarn for building and running UI.  Instructions at <a href="https://classic.yarnpkg.com/en/docs/install">https://classic.yarnpkg.com/en/docs/install</a>.</li>
-<li><a href="redis.html">Redis</a> instance</li>
-<li><a href="elastic_search_6.html">Elastic Search 6</a> or  <a href="elastic_search_7.html">Elastic Search 7</a> instance</li>
-</ol>
-<h3 id="steps-to-build-conductor-server">Steps to build Conductor Server</h3>
-<h4 id="1-checkout-the-code">1. Checkout the code</h4>
-<p>Clone conductor code from the repo: https://github.com/swift-conductor/conductor</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/swift-conductor/conductor.git
+<h1 id="redis">Redis</h1>
+<p>Install Podman:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>brew<span class="w"> </span>install<span class="w"> </span>podman
 </code></pre></div>
-<h4 id="2-build-and-run-server">2. Build and run Server</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>server
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># or</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">cd</span><span class="w"> </span>server
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>../gradlew<span class="w"> </span>bootRun
+<p>Start Podman machine:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>podman<span class="w"> </span>machine<span class="w"> </span>init<span class="w"> </span>--cpus<span class="w"> </span><span class="m">2</span><span class="w"> </span>--disk-size<span class="w"> </span><span class="m">100</span><span class="w"> </span>--memory<span class="w"> </span><span class="m">4096</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>podman<span class="w"> </span>machine<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--rootful
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>podman<span class="w"> </span>machine<span class="w"> </span>start
 </code></pre></div>
-<p>Navigate to the Swagger API docs:
-<a href="http://localhost:8080/swagger-ui/index.html?configUrl=/api-docs/swagger-config">http://localhost:8080/swagger-ui/index.html?configUrl=/api-docs/swagger-config</a></p>
-<p><img alt="swagger" src="swagger.png" /></p>
-<blockquote>
-<p><strong>NOTE for Mac with an Apple Silicon users</strong>: If you are using a new Mac with an Apple Silicon Chip, you must make a small change to <code>conductor/grpc/build.gradle</code> - adding "osx-x86_64" to two lines:</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>protobuf {
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    protoc {
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        artifact = &quot;com.google.protobuf:protoc:${revProtoBuf}:osx-x86_64&quot;
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    }
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    plugins {
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        grpc {
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            artifact = &quot;io.grpc:protoc-gen-grpc-java:${revGrpc}:osx-x86_64&quot;
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        }
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    }
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>...
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>} 
+<p>Start Redis container:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>podman<span class="w"> </span>pull<span class="w"> </span>docker.io/redis
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>redis-conductor<span class="w"> </span>-p<span class="w"> </span><span class="m">6379</span>:6379<span class="w"> </span>redis
 </code></pre></div>
-<p>You may also need to install Rosetta:  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>softwareupdate<span class="w"> </span>--install-rosetta
-</code></pre></div>
-<h2 id="download-and-run">Download and Run</h2>
-<p>As an alternative to building from source, you can download and run the pre-compiled JAR.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CONDUCTOR_VER</span><span class="o">=</span><span class="m">3</span>.3.4
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">REPO_URL</span><span class="o">=</span>https://repo1.maven.org/maven2/com/netflix/conductor/conductor-server
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>curl<span class="w"> </span><span class="nv">$REPO_URL</span>/<span class="nv">$CONDUCTOR_VER</span>/conductor-server-<span class="nv">$CONDUCTOR_VER</span>-boot.jar<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>--output<span class="w"> </span>conductor-server-<span class="nv">$CONDUCTOR_VER</span>-boot.jar<span class="p">;</span><span class="w"> </span>java<span class="w"> </span>-jar<span class="w"> </span>conductor-server-<span class="nv">$CONDUCTOR_VER</span>-boot.jar<span class="w"> </span>
-</code></pre></div>
-Navigate to the Swagger API docs:</p>
-<p><a href="http://localhost:8080/swagger-ui/index.html?configUrl=/api-docs/swagger-config">http://localhost:8080/swagger-ui/index.html?configUrl=/api-docs/swagger-config</a></p>
-<h2 id="build-and-run-ui">Build and Run UI</h2>
-<h3 id="conductor-ui-from-source">Conductor UI from Source</h3>
-<p>The UI is a standard <code>create-react-app</code> React Single Page Application (SPA). To get started, with Node 14 and <code>yarn</code> installed, first run <code>yarn install</code> from within the <code>/ui</code> directory to retrieve package dependencies.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>ui
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>yarn<span class="w"> </span>install
-</code></pre></div>
-<p>There is no need to "build" the project unless you require compiled assets to host on a production web server. If the latter is true, the project can be built with the command <code>yarn build</code>.</p>
-<p>To run the UI on the bundled development server, run <code>yarn run start</code>. Navigate your browser to <code>http://localhost:5000</code>. The server must already be running on port 8080. </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>yarn<span class="w"> </span>run<span class="w"> </span>start
-</code></pre></div>
-<p>Launch UI <a href="http://localhost:5000">http://localhost:5000</a></p>
-<p><img alt="conductor ui" src="conductorUI.png" /></p>
-<h2 id="summary">Summary</h2>
-<ol>
-<li>By default in-memory persistence is used, so any workflows created or excuted will be wiped out once the server is terminated.</li>
-<li>Without indexing configured, the search functionality in UI will not work and will result an empty set.</li>
-<li>See how to install Conductor using <a href="docker.html">Docker</a> with persistence and indexing.</li>
-</ol>
 
 
 
@@ -3601,44 +3283,6 @@ Navigate to the Swagger API docs:</p>
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../concepts/why.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why Conductor?">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Why Conductor?
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="docker.html" class="md-footer__link md-footer__link--next" aria-label="Next: Running Conductor Using Docker">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Running Conductor Using Docker
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
