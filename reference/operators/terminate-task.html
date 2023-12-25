@@ -10,9 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://swiftconductor.com/devguide/running/elastic_search_7.html">
+        <link rel="canonical" href="https://swiftconductor.com/reference/operators/terminate-task.html">
       
       
+        <link rel="prev" href="switch-task.html">
+      
+      
+        <link rel="next" href="wait-task.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Elastic Search 7 - Conductor Documentation</title>
+        <title>Terminate - Conductor Documentation</title>
       
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#elastic-search-7" class="md-skip">
+        <a href="#terminate" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Elastic Search 7
+              Terminate
             
           </span>
         </div>
@@ -202,6 +206,26 @@
   
     
     
+      <li class="md-tabs__item">
+        <a href="../../getting-started/why-conductor.html" class="md-tabs__link">
+          
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
       
   
   
@@ -209,7 +233,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../concepts/index.html" class="md-tabs__link">
+        <a href="../../devguide/concepts/index.html" class="md-tabs__link">
           
   
     
@@ -238,12 +262,45 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../documentation/api/index.html" class="md-tabs__link">
+        <a href="../../documentation/architecture/overview.html" class="md-tabs__link">
           
   
     
   
   Documentation
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../api/index.html" class="md-tabs__link">
+          
+  
+    
+  
+  Reference
 
         </a>
       </li>
@@ -365,8 +422,6 @@
       
         
       
-        
-      
     
     
     
@@ -386,7 +441,7 @@
             
   
   <span class="md-ellipsis">
-    Developer's Guide
+    Getting Started
   </span>
   
 
@@ -396,7 +451,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Developer's Guide
+            Getting Started
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -406,132 +461,8 @@
   
   
   
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../concepts/index.html" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Concepts
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1">
-            <span class="md-nav__icon md-icon"></span>
-            Concepts
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../concepts/workflows.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Workflows
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/tasks.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tasks
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/workers.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Workers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../concepts/why.html" class="md-nav__link">
+      <a href="../../getting-started/why-conductor.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -540,14 +471,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -603,11 +526,11 @@
   
   
     <li class="md-nav__item">
-      <a href="source.html" class="md-nav__link">
+      <a href="../../getting-started/running/source.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Building Conductor From Source
+    From Source
   </span>
   
 
@@ -624,11 +547,11 @@
   
   
     <li class="md-nav__item">
-      <a href="docker.html" class="md-nav__link">
+      <a href="../../getting-started/running/docker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Running Conductor Using Docker
+    Using Docker
   </span>
   
 
@@ -645,6 +568,149 @@
   
 
               
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/basic-concepts.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/steps.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High Level Steps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/client.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using the Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/start-workflow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Starting a Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Developer's Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Developer's Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -674,32 +740,32 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../architecture/index.html" class="md-nav__link ">
+            <a href="../../devguide/concepts/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    Architecture
+    Introduction
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
-            Architecture
+            Introduction
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -712,11 +778,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/tasklifecycle.html" class="md-nav__link">
+      <a href="../../devguide/concepts/workflows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Task Lifecycle
+    Workflows
   </span>
   
 
@@ -733,11 +799,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/technicaldetails.html" class="md-nav__link">
+      <a href="../../devguide/concepts/tasks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Technical Details
+    Tasks
   </span>
   
 
@@ -754,11 +820,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/directed-acyclic-graph.html" class="md-nav__link">
+      <a href="../../devguide/concepts/workers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Directed Acyclic Graph (DAG)
+    Workers
   </span>
   
 
@@ -802,10 +868,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -816,8 +882,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             How Tos
           </label>
@@ -855,10 +921,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_1" id="__nav_2_4_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -869,8 +935,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
             <span class="md-nav__icon md-icon"></span>
             Workflows
           </label>
@@ -883,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Workflows/debugging-workflows.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Workflows/debugging-workflows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -904,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Workflows/handling-errors.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Workflows/handling-errors.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -925,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Workflows/searching-workflows.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Workflows/searching-workflows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -946,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Workflows/starting-workflows.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Workflows/starting-workflows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Workflows/updating-workflows.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Workflows/updating-workflows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Workflows/view-workflow-executions.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Workflows/view-workflow-executions.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1009,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Workflows/versioning-workflows.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Workflows/versioning-workflows.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1067,10 +1133,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1081,8 +1147,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
             <span class="md-nav__icon md-icon"></span>
             Tasks
           </label>
@@ -1095,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Tasks/creating-tasks.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Tasks/creating-tasks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1116,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Tasks/dynamic-vs-switch-tasks.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Tasks/dynamic-vs-switch-tasks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1137,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Tasks/monitoring-task-queues.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Tasks/monitoring-task-queues.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1158,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Tasks/reusing-tasks.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Tasks/reusing-tasks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1179,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Tasks/task-configurations.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Tasks/task-configurations.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Tasks/task-inputs.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Tasks/task-inputs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1221,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Tasks/task-timeouts.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Tasks/task-timeouts.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1242,7 +1308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Tasks/updating-tasks.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Tasks/updating-tasks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1263,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Tasks/extending-system-tasks.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Tasks/extending-system-tasks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1309,10 +1375,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1323,8 +1389,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
             <span class="md-nav__icon md-icon"></span>
             Workers
           </label>
@@ -1337,11 +1403,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Workers/build-a-golang-task-worker.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Workers/build-a-python-task-worker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Build a Go Task Worker
+    Build a Python Task Worker
   </span>
   
 
@@ -1358,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Workers/build-a-java-task-worker.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Workers/build-a-java-task-worker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1379,11 +1445,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Workers/build-a-python-task-worker.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Workers/build-a-golang-task-worker.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Build a Python Task Worker
+    Build a Go Task Worker
   </span>
   
 
@@ -1421,10 +1487,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_4_4" id="__nav_2_4_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1435,8 +1501,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_4">
             <span class="md-nav__icon md-icon"></span>
             Monitoring
           </label>
@@ -1449,7 +1515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-tos/Monitoring/Conductor-LogLevel.html" class="md-nav__link">
+      <a href="../../devguide/how-tos/Monitoring/Conductor-LogLevel.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1498,6 +1564,8 @@
       
         
       
+        
+      
     
     
     
@@ -1507,12 +1575,12 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../labs/index.html" class="md-nav__link ">
+            <a href="../../devguide/labs/index.html" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1523,14 +1591,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Tutorial
           </label>
@@ -1545,7 +1613,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../labs/first-workflow.html" class="md-nav__link">
+      <a href="../../devguide/labs/beginner.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Beginner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devguide/labs/first-workflow.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1566,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../labs/eventhandlers.html" class="md-nav__link">
+      <a href="../../devguide/labs/eventhandlers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1587,7 +1676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../labs/kitchensink.html" class="md-nav__link">
+      <a href="../../devguide/labs/kitchensink.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1616,11 +1705,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq.html" class="md-nav__link">
+      <a href="../../devguide/bestpractices.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    FAQ
+    Best Practices
   </span>
   
 
@@ -1637,11 +1726,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../bestpractices.html" class="md-nav__link">
+      <a href="../../devguide/faq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Best Practices
+    FAQ
   </span>
   
 
@@ -1666,6 +1755,8 @@
   
     
     
+      
+        
       
         
       
@@ -1689,10 +1780,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1703,8 +1794,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Documentation
           </label>
@@ -1718,14 +1809,6 @@
   
     
     
-      
-        
-          
-        
-      
-        
-      
-        
       
         
       
@@ -1742,49 +1825,39 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../documentation/api/index.html" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
-    API Specification
+    Architecture
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
-            API Specification
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
               
-            
-              
                 
   
   
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/api/metadata.html" class="md-nav__link">
+      <a href="../../documentation/architecture/overview.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Metadata API
+    Overview
   </span>
   
 
@@ -1801,11 +1874,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/api/startworkflow.html" class="md-nav__link">
+      <a href="../../documentation/architecture/directed-acyclic-graph.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Start Workflow API
+    Directed Acyclic Graph (DAG)
   </span>
   
 
@@ -1822,53 +1895,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/api/workflow.html" class="md-nav__link">
+      <a href="../../documentation/architecture/tasklifecycle.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Workflow API
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/api/task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Task API
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/api/taskdomains.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Task Domains
+    Task Lifecycle
   </span>
   
 
@@ -1901,6 +1932,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1910,10 +1947,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1924,8 +1961,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Configuration
           </label>
@@ -1944,10 +1981,6 @@
           
         
       
-        
-      
-        
-      
     
     
     
@@ -1957,7 +1990,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
         
           
           
@@ -1972,533 +2005,15 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
             <span class="md-nav__icon md-icon"></span>
             Workflow Definition
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../documentation/configuration/workflowdef/operators/index.html" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Operators
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_2_1_2" id="__nav_3_2_1_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_1_2">
-            <span class="md-nav__icon md-icon"></span>
-            Operators
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/operators/do-while-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Do-While
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/operators/dynamic-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dynamic
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/operators/dynamic-fork-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Dynamic Fork
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/operators/fork-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Fork
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/operators/join-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Join
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/operators/set-variable-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Set Variable
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/operators/start-workflow-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Start Workflow
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/operators/sub-workflow-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sub Workflow
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/operators/switch-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Switch
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/operators/terminate-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Terminate
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../documentation/configuration/workflowdef/systemtasks/index.html" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    System Tasks
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_2_1_3" id="__nav_3_2_1_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_1_3">
-            <span class="md-nav__icon md-icon"></span>
-            System Tasks
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/systemtasks/event-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Event Task
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/systemtasks/http-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    HTTP Task
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/systemtasks/human-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Human Task
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/systemtasks/inline-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inline Task
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/systemtasks/json-jq-transform-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    JSON JQ Transform Task
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/systemtasks/kafka-publish-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Kafka Publish Task
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/configuration/workflowdef/systemtasks/wait-task.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Wait Task
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
               
             
           </ul>
@@ -2537,11 +2052,74 @@
   
   
     <li class="md-nav__item">
+      <a href="../../documentation/configuration/workerdef.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Worker Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../documentation/configuration/eventhandlers.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Event Handlers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/configuration/taskdomains.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task Domains
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/configuration/isolation-groups.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Isolation Groups
   </span>
   
 
@@ -2581,10 +2159,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2595,8 +2173,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Conductor Metrics
           </label>
@@ -2673,8 +2251,6 @@
       
         
       
-        
-      
     
     
     
@@ -2684,10 +2260,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2698,8 +2274,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             Advanced Topics
           </label>
@@ -2717,27 +2293,6 @@
   
   <span class="md-ellipsis">
     Extending Conductor
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../documentation/advanced/isolationgroups.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Isolation Groups
   </span>
   
 
@@ -2892,7 +2447,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
           
@@ -2908,14 +2463,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             Client SDKs
           </label>
@@ -2930,11 +2485,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../documentation/clientsdks/python-sdk.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python SDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../documentation/clientsdks/java-sdk.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Java SDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/clientsdks/go-sdk.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go SDK
   </span>
   
 
@@ -2986,6 +2583,14 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
@@ -2993,11 +2598,150 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/clientsdks/go-sdk.html" class="md-nav__link">
+      <a href="../../documentation/architecture/technicaldetails.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Go SDK
+    Technical Details
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../api/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    API Specification
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            API Specification
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/metadata.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata API
   </span>
   
 
@@ -3014,11 +2758,692 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/clientsdks/python-sdk.html" class="md-nav__link">
+      <a href="../api/workflow.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Python SDK
+    Workflow API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Task API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/startworkflow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start Workflow API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    System Operators
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            System Operators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="do-while-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Do-While
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dynamic-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dynamic-fork-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Fork
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fork-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fork
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="join-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Join
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="set-variable-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set Variable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="start-workflow-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sub-workflow-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sub Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="switch-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Switch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Terminate
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="terminate-task.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Terminate
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputparameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      inputParameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-with-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use with SWITCH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wait-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wait
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../systemtasks/index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    System Tasks
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            System Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemtasks/event-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event Task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemtasks/http-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTP Task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemtasks/human-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Human Task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemtasks/inline-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inline Task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemtasks/json-jq-transform-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON JQ Transform Task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemtasks/kafka-publish-task.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kafka Publish Task
   </span>
   
 
@@ -3072,10 +3497,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -3086,8 +3511,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Resources
           </label>
@@ -3204,6 +3629,98 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inputparameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      inputParameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-with-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use with SWITCH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3220,20 +3737,113 @@
   
 
 
-<h1 id="elastic-search-7">Elastic Search 7</h1>
-<p>Install Podman:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>brew<span class="w"> </span>install<span class="w"> </span>podman
+<h1 id="terminate">Terminate</h1>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TERMINATE&quot;</span>
 </code></pre></div>
-<p>Start Podman machine:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>podman<span class="w"> </span>machine<span class="w"> </span>init<span class="w"> </span>--cpus<span class="w"> </span><span class="m">2</span><span class="w"> </span>--disk-size<span class="w"> </span><span class="m">100</span><span class="w"> </span>--memory<span class="w"> </span><span class="m">4096</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>podman<span class="w"> </span>machine<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--rootful
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>podman<span class="w"> </span>machine<span class="w"> </span>start
+<p>The <code>TERMINATE</code> task can terminate the workflow with a given status and set the workflow's output with the provided value. 
+It can act as a <code>return</code> statement for conditions where you simply want to terminate your workflow. </p>
+<h2 id="use-cases">Use Cases</h2>
+<p>Use it when you want to terminate the workflow without continuing the execution.<br />
+For example, if you have a decision where the first condition is met, you want to execute some tasks, 
+otherwise you want to finish your workflow.</p>
+<h2 id="configuration">Configuration</h2>
+<p>The <code>TERMINATE</code> task is configured with the following attributes inside <code>inputParameters</code>.</p>
+<h3 id="inputparameters">inputParameters</h3>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>terminationStatus</td>
+<td>String</td>
+<td>Either <code>COMPLETED</code> or <code>FAILED</code></td>
+<td>required</td>
+</tr>
+<tr>
+<td>workflowOutput</td>
+<td>Any</td>
+<td>Workflow output to be set</td>
+<td></td>
+</tr>
+<tr>
+<td>terminationReason</td>
+<td>String</td>
+<td>For failed tasks, this reason is recorded and passed to any configured <code>failureWorkflow</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="output">Output</h2>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>output</td>
+<td>Map</td>
+<td>The content of <code>workflowOutput</code> from the inputParameters. An empty object if <code>workflowOutput</code> is not set.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<h3 id="basic-example">Basic Example</h3>
+<p>Terminate task is defined directly inside the workflow with type
+<code>TERMINATE</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;terminate&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;taskReferenceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;terminate0&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;terminationStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;COMPLETED&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">&quot;workflowOutput&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${task0.output}&quot;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TERMINATE&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">&quot;startDelay&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nt">&quot;optional&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
 </code></pre></div>
-<p>Start Elastic Search 7 container on port 9300:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>podman<span class="w"> </span>pull<span class="w"> </span>docker.io/elasticsearch:7.17.16
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>es7-conductor<span class="w"> </span>-p<span class="w"> </span><span class="m">9200</span>:9200<span class="w"> </span>-p<span class="w"> </span><span class="m">9300</span>:9300<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;ES_JAVA_OPTS=-Xms512m -Xmx1024m&quot;</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;xpack.security.enabled=false&quot;</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;discovery.type=single-node&quot;</span><span class="w"> </span>elasticsearch:7.17.16
+<h3 id="use-with-switch">Use with SWITCH</h3>
+<p>Let's consider the same example we had in <a href="switch-task.html">Switch Task</a>.</p>
+<p>Suppose in a workflow, we have to take decision to ship the courier with the shipping
+service providers on the basis of input provided while running the workflow.
+If the input provided while running workflow does not match with the available
+shipping providers then the workflow will fail and return. If input provided 
+matches then it goes ahead.</p>
+<p>Here is a snippet that shows the default switch case terminating the workflow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;switch_task&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;taskReferenceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;switch_task&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SWITCH&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">&quot;defaultCase&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;terminate&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="nt">&quot;taskReferenceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;terminate&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TERMINATE&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">          </span><span class="nt">&quot;terminationStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FAILED&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">          </span><span class="nt">&quot;terminationReason&quot;</span><span class="p">:</span><span class="s2">&quot;Shipping provider not found.&quot;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">      </span><span class="p">}</span><span class="w">      </span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">   </span><span class="p">]</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="p">}</span>
 </code></pre></div>
+<p>Workflow gets created as shown in the diagram.</p>
+<p><img alt="Conductor UI - Workflow Diagram" src="Terminate_Task.png" /></p>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li>Include termination reason when terminating the workflow with failure status to make it easy to understand the cause.</li>
+<li>Include any additional details (e.g. output of the tasks, switch case etc) that helps understand the path taken to termination.</li>
+</ol>
 
 
 
@@ -3260,6 +3870,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="switch-task.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Switch">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Switch
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="wait-task.html" class="md-footer__link md-footer__link--next" aria-label="Next: Wait">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Wait
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
