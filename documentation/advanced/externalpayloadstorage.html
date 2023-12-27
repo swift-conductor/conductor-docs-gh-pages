@@ -3814,7 +3814,7 @@ Set the following property in the JVM system properties:
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/netflix/conductor/core/utils/S3PayloadStorage.java#L44-L45">implementation</a> assumes that S3 access is configured on the instance.</p>
+<p>This <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/swiftconductor/conductor/core/utils/S3PayloadStorage.java#L44-L45">implementation</a> assumes that S3 access is configured on the instance.</p>
 </div>
 <p>Set the following properties to the desired values in the JVM system properties:</p>
 <table>
@@ -3838,7 +3838,7 @@ Set the following property in the JVM system properties:
 </tr>
 </tbody>
 </table>
-<p>The payloads will be stored in the bucket configured above in a <code>UUID.json</code> file at locations determined by the type of the payload. See <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/netflix/conductor/core/utils/S3PayloadStorage.java#L149-L167">here</a> for information about how the object key is determined.</p>
+<p>The payloads will be stored in the bucket configured above in a <code>UUID.json</code> file at locations determined by the type of the payload. See <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/swiftconductor/conductor/core/utils/S3PayloadStorage.java#L149-L167">here</a> for information about how the object key is determined.</p>
 <h3 id="azure-blob-storage">Azure Blob Storage</h3>
 <p>ProductLive provides an implementation of <a href="https://azure.microsoft.com/services/storage/blobs/">Azure Blob Storage</a> used to externalize large payload storage.  </p>
 <p>To build conductor with azure blob feature read the <a href="https://github.com/swift-conductor/conductor/blob/master/azureblob-storage/README.md">README.md</a> in <code>azureblob-storage</code> module </p>
@@ -3904,7 +3904,7 @@ If you want signed url to expired you must specify a Connection String. </p>
 </tr>
 </tbody>
 </table>
-<p>The payloads will be stored as done in <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/netflix/conductor/core/utils/S3PayloadStorage.java#L149-L167">Amazon S3</a>.</p>
+<p>The payloads will be stored as done in <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/swiftconductor/conductor/core/utils/S3PayloadStorage.java#L149-L167">Amazon S3</a>.</p>
 <h3 id="postgresql-storage">PostgreSQL Storage</h3>
 <p>Frinx provides an implementation of <a href="https://www.postgresql.org/">PostgreSQL Storage</a> used to externalize large payload storage.</p>
 <div class="admonition note">

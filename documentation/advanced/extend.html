@@ -3659,39 +3659,39 @@
 <p>Conductor provides a pluggable backend.  The current implementation uses Dynomite.</p>
 <p>There are 4 interfaces that need to be implemented for each backend:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">//Store for workflow and task definitions</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">com</span><span class="p">.</span><span class="na">netflix</span><span class="p">.</span><span class="na">conductor</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">MetadataDAO</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">com</span><span class="p">.</span><span class="na">swiftconductor</span><span class="p">.</span><span class="na">conductor</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">MetadataDAO</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">//Store for workflow executions</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">com</span><span class="p">.</span><span class="na">netflix</span><span class="p">.</span><span class="na">conductor</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">ExecutionDAO</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">com</span><span class="p">.</span><span class="na">swiftconductor</span><span class="p">.</span><span class="na">conductor</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">ExecutionDAO</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">//Index for workflow executions</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">com</span><span class="p">.</span><span class="na">netflix</span><span class="p">.</span><span class="na">conductor</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">IndexDAO</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">com</span><span class="p">.</span><span class="na">swiftconductor</span><span class="p">.</span><span class="na">conductor</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">IndexDAO</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">//Queue provider for tasks</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">com</span><span class="p">.</span><span class="na">netflix</span><span class="p">.</span><span class="na">conductor</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">QueueDAO</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">com</span><span class="p">.</span><span class="na">swiftconductor</span><span class="p">.</span><span class="na">conductor</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">QueueDAO</span>
 </code></pre></div>
 <p>It is possible to mix and match different implementations for each of these.<br />
 For example, SQS for queueing and a relational store for others.</p>
 <h2 id="system-tasks">System Tasks</h2>
 <p>To create system tasks follow the steps below:</p>
 <ul>
-<li>Extend <code>com.netflix.conductor.core.execution.tasks.WorkflowSystemTask</code></li>
+<li>Extend <code>com.swiftconductor.conductor.core.execution.tasks.WorkflowSystemTask</code></li>
 <li>Instantiate the new class as part of the startup (eager singleton)</li>
-<li>Implement the <code>TaskMapper</code> <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/netflix/conductor/core/execution/mapper/TaskMapper.java">interface</a></li>
-<li>Add this implementation to the map identified by <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/netflix/conductor/core/config/CoreModule.java#L70">TaskMappers</a></li>
+<li>Implement the <code>TaskMapper</code> <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/swiftconductor/conductor/core/execution/mapper/TaskMapper.java">interface</a></li>
+<li>Add this implementation to the map identified by <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/swiftconductor/conductor/core/config/CoreModule.java#L70">TaskMappers</a></li>
 </ul>
 <h2 id="external-payload-storage">External Payload Storage</h2>
 <p>To configure conductor to externalize the storage of large payloads:</p>
 <ul>
-<li>Implement the <code>ExternalPayloadStorage</code> <a href="https://github.com/swift-conductor/conductor/blob/master/common/src/main/java/com/netflix/conductor/common/utils/ExternalPayloadStorage.java">interface</a>.</li>
-<li>Add the storage option to the enum <a href="https://github.com/swift-conductor/conductor/blob/master/server/src/main/java/com/netflix/conductor/bootstrap/ModulesProvider.java#L39">here</a>.</li>
+<li>Implement the <code>ExternalPayloadStorage</code> <a href="https://github.com/swift-conductor/conductor/blob/master/common/src/main/java/com/swiftconductor/conductor/common/utils/ExternalPayloadStorage.java">interface</a>.</li>
+<li>Add the storage option to the enum <a href="https://github.com/swift-conductor/conductor/blob/master/server/src/main/java/com/swiftconductor/conductor/bootstrap/ModulesProvider.java#L39">here</a>.</li>
 <li>Set this JVM system property <code>workflow.external.payload.storage</code> to the value of the enum element added above.</li>
-<li>Add a binding similar to <a href="https://github.com/swift-conductor/conductor/blob/master/server/src/main/java/com/netflix/conductor/bootstrap/ModulesProvider.java#L120-L127">this</a>.</li>
+<li>Add a binding similar to <a href="https://github.com/swift-conductor/conductor/blob/master/server/src/main/java/com/swiftconductor/conductor/bootstrap/ModulesProvider.java#L120-L127">this</a>.</li>
 </ul>
 <h2 id="workflow-status-listener">Workflow Status Listener</h2>
 <p>To provide a notification mechanism upon completion/termination of workflows:</p>
 <ul>
-<li>Implement the <code>WorkflowStatusListener</code> <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/netflix/conductor/core/execution/WorkflowStatusListener.java">interface</a></li>
+<li>Implement the <code>WorkflowStatusListener</code> <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/swiftconductor/conductor/core/execution/WorkflowStatusListener.java">interface</a></li>
 <li>This can be configured to plugin custom notification/eventing upon workflows reaching a terminal state.</li>
 </ul>
 <h2 id="locking-service">Locking Service</h2>
@@ -3699,13 +3699,13 @@ For example, SQS for queueing and a relational store for others.</p>
 for eg., with Dynomite and Redlock:</p>
 <ul>
 <li>Implement <code>Lock</code> interface.</li>
-<li>Add a binding similar to <a href="https://github.com/swift-conductor/conductor/blob/master/server/src/main/java/com/netflix/conductor/bootstrap/ModulesProvider.java#L115-L129">this</a></li>
+<li>Add a binding similar to <a href="https://github.com/swift-conductor/conductor/blob/master/server/src/main/java/com/swiftconductor/conductor/bootstrap/ModulesProvider.java#L115-L129">this</a></li>
 <li>Enable locking service: <code>conductor.app.workflowExecutionLockEnabled: true</code></li>
 </ul>
 <h2 id="event-handling">Event Handling</h2>
-<p>Provide the implementation of <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/netflix/conductor/core/events/EventQueueProvider.java">EventQueueProvider</a>.</p>
+<p>Provide the implementation of <a href="https://github.com/swift-conductor/conductor/blob/master/core/src/main/java/com/swiftconductor/conductor/core/events/EventQueueProvider.java">EventQueueProvider</a>.</p>
 <p>E.g. SQS Queue Provider: 
-<a href="https://github.com/swift-conductor/conductor/blob/master/contribs/src/main/java/com/netflix/conductor/core/events/sqs/SQSEventQueueProvider.java">SQSEventQueueProvider.java </a></p>
+<a href="https://github.com/swift-conductor/conductor/blob/master/contribs/src/main/java/com/swiftconductor/conductor/core/events/sqs/SQSEventQueueProvider.java">SQSEventQueueProvider.java </a></p>
 
 
 

@@ -3644,11 +3644,11 @@
 </table>
 <h2 id="worker">Worker</h2>
 <p>Conductor provides an automated framework to poll for tasks, manage the execution thread and update the status of the execution back to the server.</p>
-<p>Implement the <a href="https://github.com/swift-conductor/conductor/blob/main/client/src/main/java/com/netflix/conductor/client/worker/Worker.java">Worker</a> interface to execute the task.</p>
+<p>Implement the <a href="https://github.com/swift-conductor/conductor/blob/main/client/src/main/java/com/swiftconductor/conductor/client/worker/Worker.java">Worker</a> interface to execute the task.</p>
 <h2 id="taskrunnerconfigurer">TaskRunnerConfigurer</h2>
 <p>The TaskRunnerConfigurer can be used to register the worker(s) and initialize the polling loop.<br />
 Manages the task workers thread pool and server communication (poll and task update).  </p>
-<p>Use the <a href="https://github.com/swift-conductor/conductor/blob/main/client/src/main/java/com/netflix/conductor/client/automator/TaskRunnerConfigurer.java#L62">Builder</a> to create an instance of the TaskRunnerConfigurer. The Builder constructor takes the following parameters.</p>
+<p>Use the <a href="https://github.com/swift-conductor/conductor/blob/main/client/src/main/java/com/swiftconductor/conductor/client/automator/TaskRunnerConfigurer.java#L62">Builder</a> to create an instance of the TaskRunnerConfigurer. The Builder constructor takes the following parameters.</p>
 <table>
 <thead>
 <tr>
@@ -3767,8 +3767,8 @@ Manages the task workers thread pool and server communication (poll and task upd
 </table>
 <h2 id="examples">Examples</h2>
 <ul>
-<li><a href="https://github.com/swift-conductor/conductor/blob/main/client/src/test/java/com/netflix/conductor/client/sample/SampleWorker.java">Sample Worker Implementation</a></li>
-<li><a href="https://github.com/swift-conductor/conductor/blob/main/client/src/test/java/com/netflix/conductor/client/sample/Main.java">Example</a></li>
+<li><a href="https://github.com/swift-conductor/conductor/blob/main/client/src/test/java/com/swiftconductor/conductor/client/sample/SampleWorker.java">Sample Worker Implementation</a></li>
+<li><a href="https://github.com/swift-conductor/conductor/blob/main/client/src/test/java/com/swiftconductor/conductor/client/sample/Main.java">Example</a></li>
 </ul>
 
 

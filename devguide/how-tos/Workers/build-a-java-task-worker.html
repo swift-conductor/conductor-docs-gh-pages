@@ -3746,19 +3746,19 @@
 <p>Conductor provides Java client libraries, which we will use to build a simple task worker.</p>
 <h3 id="maven-dependency">Maven Dependency</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.netflix.conductor<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.swiftconductor.conductor<span class="nt">&lt;/groupId&gt;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>conductor-client<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>3.13.2<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>3.16<span class="nt">&lt;/version&gt;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">&lt;/dependency&gt;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.netflix.conductor<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.swiftconductor.conductor<span class="nt">&lt;/groupId&gt;</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>conductor-common<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>3.13.2<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>3.16<span class="nt">&lt;/version&gt;</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">&lt;/dependency&gt;</span>
 </code></pre></div>
 <h3 id="gradle">Gradle</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">implementation</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.netflix.conductor&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;conductor-client&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">version:</span><span class="w"> </span><span class="s1">&#39;3.13.2&#39;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">implementation</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.netflix.conductor&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;conductor-common&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">version:</span><span class="w"> </span><span class="s1">&#39;3.13.2&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">implementation</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.swiftconductor.conductor&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;conductor-client&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">version:</span><span class="w"> </span><span class="s1">&#39;3.16&#39;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">implementation</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.swiftconductor.conductor&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;conductor-common&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">version:</span><span class="w"> </span><span class="s1">&#39;3.16&#39;</span>
 </code></pre></div>
 <h2 id="implementing-a-task-worker">Implementing a Task Worker</h2>
 <p>To create a worker, implement the <code>Worker</code> interface.</p>
@@ -3796,11 +3796,11 @@
 <li><strong>FAILED</strong>: If there are failures - business or system failures. Based on the task's configuration, when a task fails, it may be retried.</li>
 </ol>
 <p>The <code>getTaskDefName()</code> method returns the name of the task for which this worker provides the execution logic.</p>
-<p>See <a href="https://github.com/swift-conductor/conductor/blob/main/client/src/test/java/com/netflix/conductor/client/sample/SampleWorker.java">SampleWorker.java</a> for the complete example.</p>
+<p>See <a href="https://github.com/swift-conductor/conductor/blob/main/client/src/test/java/com/swiftconductor/conductor/client/sample/SampleWorker.java">SampleWorker.java</a> for the complete example.</p>
 <h2 id="configuring-polling-using-taskrunnerconfigurer">Configuring polling using TaskRunnerConfigurer</h2>
 <p>The <code>TaskRunnerConfigurer</code> can be used to register the worker(s) and initialize the polling loop.
 It manages the task workers thread pool and server communication (poll and task update).</p>
-<p>Use the <a href="https://github.com/swift-conductor/conductor/blob/main/client/src/main/java/com/netflix/conductor/client/automator/TaskRunnerConfigurer.java#L64">Builder</a> to create an instance of the <code>TaskRunnerConfigurer</code>. The builder accepts the following parameters:</p>
+<p>Use the <a href="https://github.com/swift-conductor/conductor/blob/main/client/src/main/java/com/swiftconductor/conductor/client/automator/TaskRunnerConfigurer.java#L64">Builder</a> to create an instance of the <code>TaskRunnerConfigurer</code>. The builder accepts the following parameters:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span><span class="n">TaskClient</span><span class="w"> </span><span class="n">taskClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TaskClient</span><span class="p">();</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w"> </span><span class="n">taskClient</span><span class="p">.</span><span class="na">setRootURI</span><span class="p">(</span><span class="s">&quot;http://localhost:8080/api/&quot;</span><span class="p">);</span><span class="w">        </span><span class="c1">//Point this to the server API</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
@@ -3817,7 +3817,7 @@ It manages the task workers thread pool and server communication (poll and task 
 <a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="c1">// Start the polling and execution of tasks</span>
 <a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="n">configurer</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
 </code></pre></div>
-<p>See <a href="https://github.com/swift-conductor/conductor/blob/main/client/src/test/java/com/netflix/conductor/client/sample/Main.java">Sample</a> for full example.</p>
+<p>See <a href="https://github.com/swift-conductor/conductor/blob/main/client/src/test/java/com/swiftconductor/conductor/client/sample/Main.java">Sample</a> for full example.</p>
 <h3 id="configuration-details">Configuration Details</h3>
 <p>Initialize the <code>Builder</code> with the following:</p>
 <table>
