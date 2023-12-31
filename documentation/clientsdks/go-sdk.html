@@ -13,18 +13,18 @@
         <link rel="canonical" href="https://swiftconductor.com/documentation/clientsdks/go-sdk.html">
       
       
-        <link rel="prev" href="java-sdk.html">
+        <link rel="prev" href="csharp-sdk.html">
       
       
-        <link rel="next" href="csharp-sdk.html">
+        <link rel="next" href="../architecture/technicaldetails.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>Go SDK - Conductor Documentation</title>
+        <title>Go Client SDK - Conductor Documentation</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#go-sdk" class="md-skip">
+        <a href="#go-client-sdk" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Go SDK
+              Go Client SDK
             
           </span>
         </div>
@@ -2440,8 +2440,6 @@
       
         
       
-        
-      
     
     
     
@@ -2493,7 +2491,7 @@
         
   
   <span class="md-ellipsis">
-    Python SDK
+    Python Client SDK
   </span>
   
 
@@ -2514,7 +2512,28 @@
         
   
   <span class="md-ellipsis">
-    Java SDK
+    Java Client SDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="csharp-sdk.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    .NET Client SDK
   </span>
   
 
@@ -2544,7 +2563,7 @@
           
   
   <span class="md-ellipsis">
-    Go SDK
+    Go Client SDK
   </span>
   
 
@@ -2555,7 +2574,7 @@
         
   
   <span class="md-ellipsis">
-    Go SDK
+    Go Client SDK
   </span>
   
 
@@ -2611,24 +2630,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#authentication-settings-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authentication settings (optional)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access-control-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Access Control Setup
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#configure-api-client" class="md-nav__link">
     <span class="md-ellipsis">
       Configure API Client
@@ -2664,48 +2665,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="csharp-sdk.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    C# SDK
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="clojure-sdk.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Clojure SDK
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -3647,24 +3606,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#authentication-settings-optional" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authentication settings (optional)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access-control-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Access Control Setup
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#configure-api-client" class="md-nav__link">
     <span class="md-ellipsis">
       Configure API Client
@@ -3714,14 +3655,14 @@
   
 
 
-<h1 id="go-sdk">Go SDK</h1>
-<p>The code for the Golang SDk is available on <a href="https://github.com/conductor-sdk/conductor-go">Github</a>. Please feel free to file PRs, issues, etc. there.</p>
+<h1 id="go-client-sdk">Go Client SDK</h1>
+<p>The code for the Go Client SDK is available on <a href="https://github.com/swift-conductor/conductor-client-golang">Github</a>. Please feel free to file PRs, issues, etc. there.</p>
 <h2 id="quick-start">Quick Start</h2>
 <ol>
-<li><a href="#Setup-conductor-go-package">Setup conductor-go package</a></li>
-<li><a href="https://github.com/conductor-sdk/conductor-go/blob/main/workers_sdk.md">Create and run Task Workers</a></li>
-<li><a href="https://github.com/conductor-sdk/conductor-go/blob/main/workflow_sdk.md">Create workflows using Code</a></li>
-<li><a href="https://github.com/conductor-sdk/conductor-go/blob/main/docs/">API Documentation</a></li>
+<li><a href="#Setup-conductor-client-golang-package">Setup conductor-client-golang package</a></li>
+<li><a href="https://github.com/swift-conductor/conductor-client-golang/blob/main/workers_sdk.md">Create and run Task Workers</a></li>
+<li><a href="https://github.com/swift-conductor/conductor-client-golang/blob/main/workflow_sdk.md">Create workflows using Code</a></li>
+<li><a href="https://github.com/swift-conductor/conductor-client-golang/blob/main/docs/">API Documentation</a></li>
 </ol>
 <h3 id="setup-conductor-go-package">Setup conductor go package</h3>
 <p>Create a folder to build your package:
@@ -3729,41 +3670,26 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>quickstart/
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>go<span class="w"> </span>mod<span class="w"> </span>init<span class="w"> </span>quickstart
 </code></pre></div></p>
-<p>Get Conductor Go SDK</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>go<span class="w"> </span>get<span class="w"> </span>github.com/conductor-sdk/conductor-go
+<p>Get Swift Conductor Go Client SDK</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>go<span class="w"> </span>get<span class="w"> </span>github.com/swift-conductor/conductor-client-golang
 </code></pre></div>
 <h2 id="configuration">Configuration</h2>
-<h3 id="authentication-settings-optional">Authentication settings (optional)</h3>
-<p>Use if your conductor server requires authentication
-* keyId: Key
-* keySecret: Secret for the Key</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">authenticationSettings</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">settings</span><span class="p">.</span><span class="nx">NewAuthenticationSettings</span><span class="p">(</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="s">&quot;keyId&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="s">&quot;keySecret&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span>
-</code></pre></div>
-<h3 id="access-control-setup">Access Control Setup</h3>
-<p>See <a href="https://orkes.io/content/docs/getting-started/concepts/access-control">Access Control</a> for more details on role based access control with Conductor and generating API keys for your environment.</p>
 <h3 id="configure-api-client">Configure API Client</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">apiClient</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nx">settings</span><span class="p">.</span><span class="nx">NewAuthenticationSettings</span><span class="p">(</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="nx">KEY</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="nx">SECRET</span><span class="p">,</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p">),</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nx">settings</span><span class="p">.</span><span class="nx">NewHttpSettings</span><span class="p">(</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="s">&quot;https://play.orkes.io&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">),</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">apiClient</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nx">settings</span><span class="p">.</span><span class="nx">NewHttpSettings</span><span class="p">(</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="s">&quot;http://localhost:8080/api&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">)</span>
 </code></pre></div>
 <h3 id="setup-logging">Setup Logging</h3>
-<p>SDK uses <a href="https://github.com/sirupsen/logrus">logrus</a> for the logging.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">SetFormatter</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">log</span><span class="p">.</span><span class="nx">TextFormatter</span><span class="p">{})</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">SetOutput</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">)</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">SetLevel</span><span class="p">(</span><span class="nx">log</span><span class="p">.</span><span class="nx">DebugLevel</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
+<p>The Go Client SDK uses <a href="https://github.com/sirupsen/logrus">logrus</a> for logging.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">SetFormatter</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">log</span><span class="p">.</span><span class="nx">TextFormatter</span><span class="p">{})</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">SetOutput</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">SetLevel</span><span class="p">(</span><span class="nx">log</span><span class="p">.</span><span class="nx">DebugLevel</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="next-create-and-run-task-workers">Next: <a href="https://github.com/conductor-sdk/conductor-go/blob/main/workers_sdk.md">Create and run Task Workers</a></h3>
+<h3 id="next-create-and-run-task-workers">Next: <a href="https://github.com/swift-conductor/conductor-client-golang/blob/main/workers_sdk.md">Create and run Task Workers</a></h3>
 
 
 
@@ -3795,7 +3721,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="java-sdk.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Java SDK">
+          <a href="csharp-sdk.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: .NET Client SDK">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3805,20 +3731,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Java SDK
+                .NET Client SDK
               </div>
             </div>
           </a>
         
         
           
-          <a href="csharp-sdk.html" class="md-footer__link md-footer__link--next" aria-label="Next: C# SDK">
+          <a href="../architecture/technicaldetails.html" class="md-footer__link md-footer__link--next" aria-label="Next: Technical Details">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                C# SDK
+                Technical Details
               </div>
             </div>
             <div class="md-footer__button md-icon">

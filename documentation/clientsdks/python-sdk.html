@@ -20,11 +20,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>Python SDK - Conductor Documentation</title>
+        <title>Python Client SDK - Conductor Documentation</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-sdk" class="md-skip">
+        <a href="#python-client-sdk" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python SDK
+              Python Client SDK
             
           </span>
         </div>
@@ -2440,8 +2440,6 @@
       
         
       
-        
-      
     
     
     
@@ -2502,7 +2500,7 @@
           
   
   <span class="md-ellipsis">
-    Python SDK
+    Python Client SDK
   </span>
   
 
@@ -2513,7 +2511,7 @@
         
   
   <span class="md-ellipsis">
-    Python SDK
+    Python Client SDK
   </span>
   
 
@@ -2602,28 +2600,7 @@
         
   
   <span class="md-ellipsis">
-    Java SDK
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="go-sdk.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Go SDK
+    Java Client SDK
   </span>
   
 
@@ -2644,7 +2621,7 @@
         
   
   <span class="md-ellipsis">
-    C# SDK
+    .NET Client SDK
   </span>
   
 
@@ -2661,11 +2638,11 @@
   
   
     <li class="md-nav__item">
-      <a href="clojure-sdk.html" class="md-nav__link">
+      <a href="go-sdk.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Clojure SDK
+    Go Client SDK
   </span>
   
 
@@ -3642,74 +3619,59 @@
   
 
 
-<h1 id="python-sdk">Python SDK</h1>
-<p>Software Development Kit for Conductor, written on and providing support for Python.</p>
-<p>The code for the Python SDk is available on <a href="https://github.com/conductor-sdk/conductor-python">Github</a>. Please feel free to file PRs, issues, etc. there.</p>
+<h1 id="python-client-sdk">Python Client SDK</h1>
+<p>The code for the Python Client SDK is available on <a href="https://github.com/swift-conductor/conductor-client-python">Github</a>. Please feel free to file PRs, issues, etc. there.</p>
 <h2 id="quick-guide">Quick Guide</h2>
 <ol>
 <li>
 <p>Create a virtual environment</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>virtualenv<span class="w"> </span>conductor
-$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>conductor/bin/activate
-$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>list
-Package<span class="w">    </span>Version
-----------<span class="w"> </span>-------
-pip<span class="w">        </span><span class="m">22</span>.0.3
-setuptools<span class="w"> </span><span class="m">60</span>.6.0
-wheel<span class="w">      </span><span class="m">0</span>.37.1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>virtualenv<span class="w"> </span>conductor
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span><span class="w"> </span>conductor/bin/activate
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>list
 </code></pre></div>
-
 </li>
 <li>
-<p>Install latest version of <code>conductor-python</code> from pypi</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>conductor-python
-Collecting<span class="w"> </span>conductor-python
-Collecting<span class="w"> </span>certifi&gt;<span class="o">=</span><span class="m">14</span>.05.14
-Collecting<span class="w"> </span>urllib3&gt;<span class="o">=</span><span class="m">1</span>.15.1
-Requirement<span class="w"> </span>already<span class="w"> </span>satisfied:<span class="w"> </span>setuptools&gt;<span class="o">=</span><span class="m">21</span>.0.0<span class="w"> </span><span class="k">in</span><span class="w"> </span>./conductor/lib/python3.8/site-packages<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>conductor-python<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">60</span>.6.0<span class="o">)</span>
-Collecting<span class="w"> </span>six&gt;<span class="o">=</span><span class="m">1</span>.10
-Installing<span class="w"> </span>collected<span class="w"> </span>packages:<span class="w"> </span>certifi,<span class="w"> </span>urllib3,<span class="w"> </span>six,<span class="w"> </span>conductor-python
-Successfully<span class="w"> </span>installed<span class="w"> </span>certifi-2021.10.8<span class="w"> </span>conductor-python-1.0.7<span class="w"> </span>six-1.16.0<span class="w"> </span>urllib3-1.26.8
+<p>Install latest version of <code>conductor-client-python</code> from pypi</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>conductor-client-python
 </code></pre></div>
-
 </li>
 <li>
 <p>Create a worker capable of executing a <code>Task</code>. Example:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">conductor.client.worker.worker_interface</span> <span class="kn">import</span> <span class="n">WorkerInterface</span>
-
-<span class="k">class</span> <span class="nc">SimplePythonWorker</span><span class="p">(</span><span class="n">WorkerInterface</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">task</span><span class="p">):</span>
-        <span class="n">task_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_task_result_from_task</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
-        <span class="n">task_result</span><span class="o">.</span><span class="n">add_output_data</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
-        <span class="n">task_result</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;COMPLETED&#39;</span>
-        <span class="k">return</span> <span class="n">task_result</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">conductor.client.worker.worker_interface</span> <span class="kn">import</span> <span class="n">WorkerInterface</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">class</span> <span class="nc">SimplePythonWorker</span><span class="p">(</span><span class="n">WorkerInterface</span><span class="p">):</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">task</span><span class="p">):</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="n">task_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_task_result_from_task</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="n">task_result</span><span class="o">.</span><span class="n">add_output_data</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="n">task_result</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;COMPLETED&#39;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="k">return</span> <span class="n">task_result</span>
 </code></pre></div>
-
 <ul>
 <li>The <code>add_output_data</code> is the most relevant part, since you can store information in a dictionary, which will be sent within <code>TaskResult</code> as your execution response to Conductor</li>
 </ul>
 </li>
 <li>
 <p>Create a main method to start polling tasks to execute with your worker. Example:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">conductor.client.automator.task_handler</span> <span class="kn">import</span> <span class="n">TaskHandler</span>
-<span class="kn">from</span> <span class="nn">conductor.client.configuration.configuration</span> <span class="kn">import</span> <span class="n">Configuration</span>
-<span class="kn">from</span> <span class="nn">conductor.client.worker.sample.faulty_execution_worker</span> <span class="kn">import</span> <span class="n">FaultyExecutionWorker</span>
-<span class="kn">from</span> <span class="nn">conductor.client.worker.sample.simple_python_worker</span> <span class="kn">import</span> <span class="n">SimplePythonWorker</span>
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">configuration</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">task_definition_name</span> <span class="o">=</span> <span class="s1">&#39;python_example_task&#39;</span>
-    <span class="n">workers</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="n">SimplePythonWorker</span><span class="p">(</span><span class="n">task_definition_name</span><span class="p">),</span>
-        <span class="n">FaultyExecutionWorker</span><span class="p">(</span><span class="n">task_definition_name</span><span class="p">)</span>
-    <span class="p">]</span>
-    <span class="k">with</span> <span class="n">TaskHandler</span><span class="p">(</span><span class="n">workers</span><span class="p">,</span> <span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">task_handler</span><span class="p">:</span>
-        <span class="n">task_handler</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">conductor.client.automator.task_handler</span> <span class="kn">import</span> <span class="n">TaskHandler</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span> <span class="nn">conductor.client.configuration.configuration</span> <span class="kn">import</span> <span class="n">Configuration</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span> <span class="nn">conductor.client.worker.sample.faulty_execution_worker</span> <span class="kn">import</span> <span class="n">FaultyExecutionWorker</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kn">from</span> <span class="nn">conductor.client.worker.sample.simple_python_worker</span> <span class="kn">import</span> <span class="n">SimplePythonWorker</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">configuration</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">task_definition_name</span> <span class="o">=</span> <span class="s1">&#39;python_example_task&#39;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">workers</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="n">SimplePythonWorker</span><span class="p">(</span><span class="n">task_definition_name</span><span class="p">),</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="n">FaultyExecutionWorker</span><span class="p">(</span><span class="n">task_definition_name</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="p">]</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="k">with</span> <span class="n">TaskHandler</span><span class="p">(</span><span class="n">workers</span><span class="p">,</span> <span class="n">configuration</span><span class="p">)</span> <span class="k">as</span> <span class="n">task_handler</span><span class="p">:</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        <span class="n">task_handler</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="n">main</span><span class="p">()</span>
 </code></pre></div>
-
 <ul>
 <li>This example contains two workers, each with a different execution method, capable of running the same <code>task_definition_name</code></li>
 </ul>
@@ -3718,25 +3680,22 @@ Successfully<span class="w"> </span>installed<span class="w"> </span>certifi-202
 <p>Now that you have implemented the example, you can start the Conductor server locally:</p>
 <ol>
 <li>
-<p>Clone <a href="https://github.com/swift-conductor/conductor">Conductor repository</a>:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/swift-conductor/conductor.git
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>conductor/
-</code></pre></div>
-
+<p>Clone <a href="https://github.com/swift-conductor/conductor">Conductor repository</a>:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/swift-conductor/conductor.git
+</code></pre></div></p>
 </li>
 <li>
-<p>Start the Conductor server:</p>
-<div class="codehilite"><pre><span></span><code>/conductor$ ./gradlew bootRun
-</code></pre></div>
-
+<p>Start the Conductor server:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>conductor/
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>./gradlew<span class="w"> </span>server
+</code></pre></div></p>
 </li>
 <li>
 <p>Start Conductor UI:</p>
-<div class="codehilite"><pre><span></span><code>/conductor$ cd ui/
-/conductor/ui$ yarn install
-/conductor/ui$ yarn run start
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>ui/
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>yarn<span class="w"> </span>install
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>yarn<span class="w"> </span>run<span class="w"> </span>start
 </code></pre></div>
-
 </li>
 </ol>
 <p>You should be able to access:
@@ -3746,69 +3705,66 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>condu
     * http://localhost:5000</p>
 </li>
 <li>
-<p>Create a <code>Task</code> within <code>Conductor</code>. Example:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;http://localhost:8080/api/metadata/taskdefs&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s1">&#39;accept: */*&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-d<span class="w"> </span><span class="s1">&#39;[</span>
-<span class="s1">    {</span>
-<span class="s1">        &quot;name&quot;: &quot;python_task_example&quot;,</span>
-<span class="s1">        &quot;description&quot;: &quot;Python task example&quot;,</span>
-<span class="s1">        &quot;retryCount&quot;: 3,</span>
-<span class="s1">        &quot;retryLogic&quot;: &quot;FIXED&quot;,</span>
-<span class="s1">        &quot;retryDelaySeconds&quot;: 10,</span>
-<span class="s1">        &quot;timeoutSeconds&quot;: 300,</span>
-<span class="s1">        &quot;timeoutPolicy&quot;: &quot;TIME_OUT_WF&quot;,</span>
-<span class="s1">        &quot;responseTimeoutSeconds&quot;: 180,</span>
-<span class="s1">        &quot;ownerEmail&quot;: &quot;example@example.com&quot;</span>
-<span class="s1">    }</span>
-<span class="s1">    ]&#39;</span>
-</code></pre></div>
-
+<p>Create a <code>Task</code> within <code>Conductor</code>. Example:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">        </span><span class="s1">&#39;http://localhost:8080/api/metadata/taskdefs&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span>-H<span class="w"> </span><span class="s1">&#39;accept: */*&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span>-d<span class="w"> </span><span class="s1">&#39;[</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="s1">        {</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="s1">            &quot;name&quot;: &quot;python_task_example&quot;,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="s1">            &quot;description&quot;: &quot;Python task example&quot;,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="s1">            &quot;retryCount&quot;: 3,</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="s1">            &quot;retryLogic&quot;: &quot;FIXED&quot;,</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="s1">            &quot;retryDelaySeconds&quot;: 10,</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="s1">            &quot;timeoutSeconds&quot;: 300,</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="s1">            &quot;timeoutPolicy&quot;: &quot;TIME_OUT_WF&quot;,</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="s1">            &quot;responseTimeoutSeconds&quot;: 180,</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="s1">            &quot;ownerEmail&quot;: &quot;example@example.com&quot;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="s1">        }</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="s1">        ]&#39;</span>
+</code></pre></div></p>
 </li>
 <li>
-<p>Create a <code>Workflow</code> within <code>Conductor</code>. Example:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;http://localhost:8080/api/metadata/workflow&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s1">&#39;accept: */*&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">    &quot;createTime&quot;: 1634021619147,</span>
-<span class="s1">    &quot;updateTime&quot;: 1630694890267,</span>
-<span class="s1">    &quot;name&quot;: &quot;workflow_with_python_task_example&quot;,</span>
-<span class="s1">    &quot;description&quot;: &quot;Workflow with Python Task example&quot;,</span>
-<span class="s1">    &quot;version&quot;: 1,</span>
-<span class="s1">    &quot;tasks&quot;: [</span>
-<span class="s1">        {</span>
-<span class="s1">        &quot;name&quot;: &quot;python_task_example&quot;,</span>
-<span class="s1">        &quot;taskReferenceName&quot;: &quot;python_task_example_ref_1&quot;,</span>
-<span class="s1">        &quot;inputParameters&quot;: {},</span>
-<span class="s1">        &quot;type&quot;: &quot;SIMPLE&quot;</span>
-<span class="s1">        }</span>
-<span class="s1">    ],</span>
-<span class="s1">    &quot;inputParameters&quot;: [],</span>
-<span class="s1">    &quot;outputParameters&quot;: {</span>
-<span class="s1">        &quot;workerOutput&quot;: &quot;${python_task_example_ref_1.output}&quot;</span>
-<span class="s1">    },</span>
-<span class="s1">    &quot;schemaVersion&quot;: 2,</span>
-<span class="s1">    &quot;restartable&quot;: true,</span>
-<span class="s1">    &quot;ownerEmail&quot;: &quot;example@example.com&quot;,</span>
-<span class="s1">    &quot;timeoutPolicy&quot;: &quot;ALERT_ONLY&quot;,</span>
-<span class="s1">    &quot;timeoutSeconds&quot;: 0</span>
-<span class="s1">    }&#39;</span>
-</code></pre></div>
-
+<p>Create a <code>Workflow</code> within <code>Conductor</code>. Example:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">        </span><span class="s1">&#39;http://localhost:8080/api/metadata/workflow&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span>-H<span class="w"> </span><span class="s1">&#39;accept: */*&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">        </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="s1">        &quot;createTime&quot;: 1634021619147,</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="s1">        &quot;updateTime&quot;: 1630694890267,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="s1">        &quot;name&quot;: &quot;workflow_with_python_task_example&quot;,</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="s1">        &quot;description&quot;: &quot;Workflow with Python Task example&quot;,</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="s1">        &quot;version&quot;: 1,</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="s1">        &quot;tasks&quot;: [</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="s1">            {</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="s1">            &quot;name&quot;: &quot;python_task_example&quot;,</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="s1">            &quot;taskReferenceName&quot;: &quot;python_task_example_ref_1&quot;,</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="s1">            &quot;inputParameters&quot;: {},</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="s1">            &quot;type&quot;: &quot;SIMPLE&quot;</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="s1">            }</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="s1">        ],</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="s1">        &quot;inputParameters&quot;: [],</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="s1">        &quot;outputParameters&quot;: {</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="s1">            &quot;workerOutput&quot;: &quot;${python_task_example_ref_1.output}&quot;</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="s1">        },</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="s1">        &quot;schemaVersion&quot;: 2,</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="s1">        &quot;restartable&quot;: true,</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="s1">        &quot;ownerEmail&quot;: &quot;example@example.com&quot;,</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="s1">        &quot;timeoutPolicy&quot;: &quot;ALERT_ONLY&quot;,</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="s1">        &quot;timeoutSeconds&quot;: 0</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="s1">        }&#39;</span>
+</code></pre></div></p>
 </li>
 <li>
-<p>Start a new workflow:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span><span class="s1">&#39;http://localhost:8080/api/workflow/workflow_with_python_task_example&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s1">&#39;accept: text/plain&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-d<span class="w"> </span><span class="s1">&#39;{}&#39;</span>
-</code></pre></div>
-
+<p>Start a new workflow:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">        </span><span class="s1">&#39;http://localhost:8080/api/workflow/workflow_with_python_task_example&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">        </span>-H<span class="w"> </span><span class="s1">&#39;accept: text/plain&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">        </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span>-d<span class="w"> </span><span class="s1">&#39;{}&#39;</span>
+</code></pre></div></p>
 <p>You should receive a <em>Workflow ID</em> at the <em>Response body</em>
 * <em>Workflow ID</em> example: <code>8ff0bc06-4413-4c94-b27a-b3210412a914</code></p>
 <p>Now you must be able to see its execution through the UI.
@@ -3820,24 +3776,20 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>condu
 </ol>
 <h3 id="unit-tests">Unit Tests</h3>
 <h4 id="simple-validation">Simple validation</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/conductor-python/src$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>-v
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>test_execute_task<span class="w"> </span><span class="o">(</span>tst.automator.test_task_runner.TestTaskRunner<span class="o">)</span><span class="w"> </span>...<span class="w"> </span>ok
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>test_execute_task_with_faulty_execution_worker<span class="w"> </span><span class="o">(</span>tst.automator.test_task_runner.TestTaskRunner<span class="o">)</span><span class="w"> </span>...<span class="w"> </span>ok
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>test_execute_task_with_invalid_task<span class="w"> </span><span class="o">(</span>tst.automator.test_task_runner.TestTaskRunner<span class="o">)</span><span class="w"> </span>...<span class="w"> </span>ok
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>----------------------------------------------------------------------
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Ran<span class="w"> </span><span class="m">3</span><span class="w"> </span>tests<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.001s
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>OK
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">cd</span><span class="w"> </span>/conductor-client-python/src<span class="w"> </span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>unittest<span class="w"> </span>-v
 </code></pre></div>
 <h4 id="run-with-code-coverage">Run with code coverage</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/conductor-python/src$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>coverage<span class="w"> </span>run<span class="w"> </span>--source<span class="o">=</span>conductor/<span class="w"> </span>-m<span class="w"> </span>unittest
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">cd</span><span class="w"> </span>/conductor-client-python/src<span class="w"> </span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>coverage<span class="w"> </span>run<span class="w"> </span>--source<span class="o">=</span>conductor/<span class="w"> </span>-m<span class="w"> </span>unittest
 </code></pre></div>
 <p>Report:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/conductor-python/src$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>coverage<span class="w"> </span>report
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">cd</span><span class="w"> </span>/conductor-client-python/src<span class="w"> </span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>coverage<span class="w"> </span>report
 </code></pre></div>
 <p>Visual coverage results:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/conductor-python/src$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>coverage<span class="w"> </span>html
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">cd</span><span class="w"> </span>/conductor-client-python/src<span class="w"> </span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>python3<span class="w"> </span>-m<span class="w"> </span>coverage<span class="w"> </span>html
 </code></pre></div>
 
 
@@ -3887,13 +3839,13 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>condu
         
         
           
-          <a href="java-sdk.html" class="md-footer__link md-footer__link--next" aria-label="Next: Java SDK">
+          <a href="java-sdk.html" class="md-footer__link md-footer__link--next" aria-label="Next: Java Client SDK">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Java SDK
+                Java Client SDK
               </div>
             </div>
             <div class="md-footer__button md-icon">
