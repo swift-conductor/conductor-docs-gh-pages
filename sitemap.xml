@@ -2,467 +2,467 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://swiftconductor.com/index.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/bestpractices.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/faq.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/concepts/index.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/concepts/tasks.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/concepts/workers.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/concepts/workflows.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Monitoring/Conductor-LogLevel.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Tasks/creating-tasks.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Tasks/dynamic-vs-switch-tasks.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Tasks/extending-system-tasks.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Tasks/monitoring-task-queues.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Tasks/reusing-tasks.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Tasks/task-configurations.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Tasks/task-inputs.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Tasks/task-timeouts.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Tasks/updating-tasks.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workers/build-a-golang-task-worker.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workers/build-a-java-task-worker.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workers/build-a-python-task-worker.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workflows/debugging-workflows.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workflows/handling-errors.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workflows/searching-workflows.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workflows/starting-workflows.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workflows/updating-workflows.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workflows/versioning-workflows.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workflows/view-workflow-executions.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/labs/index.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/labs/beginner.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/labs/eventhandlers.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/labs/first-workflow.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/labs/kitchensink.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/advanced/annotation-processor.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/advanced/archival-of-workflows.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/advanced/azureblob-storage.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/advanced/extend.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/advanced/externalpayloadstorage.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/advanced/redis.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/architecture/directed-acyclic-graph.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/architecture/overview.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/architecture/tasklifecycle.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/architecture/technicaldetails.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/clientsdks/index.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/clientsdks/csharp-sdk.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/clientsdks/go-sdk.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/clientsdks/java-sdk.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/clientsdks/python-sdk.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/configuration/eventhandlers.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/configuration/isolation-groups.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/configuration/taskdef.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/configuration/taskdomains.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/configuration/workerdef.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/configuration/workflowdef/index.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/metrics/client.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/documentation/metrics/server.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/getting-started/basic-concepts.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/getting-started/client.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/getting-started/start-workflow.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/getting-started/steps.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/getting-started/why-conductor.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/getting-started/running/docker.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/getting-started/running/elastic_search_6.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/getting-started/running/elastic_search_7.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/getting-started/running/redis.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/getting-started/running/source.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/api/index.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/api/metadata.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/api/startworkflow.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/api/task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/api/workflow.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/index.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/do-while-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/dynamic-fork-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/dynamic-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/fork-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/join-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/set-variable-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/start-workflow-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/sub-workflow-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/switch-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/terminate-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/operators/wait-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/systemtasks/index.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/systemtasks/event-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/systemtasks/http-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/systemtasks/human-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/systemtasks/inline-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/systemtasks/json-jq-transform-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/reference/systemtasks/kafka-publish-task.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/resources/code-of-conduct.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/resources/contributing.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/resources/license.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://swiftconductor.com/resources/related.html</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
