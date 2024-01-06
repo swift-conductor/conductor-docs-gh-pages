@@ -1418,17 +1418,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Build a Python Task Worker
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="build-a-python-task-worker.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1438,67 +1427,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-the-python-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install the python client
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implement-a-task-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implement a Task Worker
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implement a Task Worker">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conductorworker-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      ConductorWorker parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#start-method-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      start method parameters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -3543,56 +3471,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-the-python-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install the python client
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implement-a-task-worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implement a Task Worker
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implement a Task Worker">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conductorworker-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      ConductorWorker parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#start-method-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      start method parameters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3610,80 +3488,7 @@
 
 
 <h1 id="build-a-python-task-worker">Build a Python Task Worker</h1>
-<h2 id="install-the-python-client">Install the python client</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">   </span>virtualenv<span class="w"> </span>conductorclient
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">   </span><span class="nb">source</span><span class="w"> </span>conductorclient/bin/activate
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">   </span><span class="nb">cd</span><span class="w"> </span>../conductor/client/python
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">   </span>python<span class="w"> </span>setup.py<span class="w"> </span>install
-</code></pre></div>
-<h2 id="implement-a-task-worker">Implement a Task Worker</h2>
-<p><a href="https://github.com/swift-conductor/conductor/blob/main/polyglot-clients/python/conductor/ConductorWorker.py#L36">ConductorWorker</a> 
-class is used to implement task workers.
-The following script shows how to bring up two task workers named <code>book_flight</code> and <code>book_car</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">conductor.ConductorWorker</span> <span class="kn">import</span> <span class="n">ConductorWorker</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">def</span> <span class="nf">book_flight_task</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;COMPLETED&#39;</span><span class="p">,</span> <span class="s1">&#39;output&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;booking_ref&#39;</span><span class="p">:</span> <span class="mi">2341111</span><span class="p">,</span> <span class="s1">&#39;airline&#39;</span><span class="p">:</span> <span class="s1">&#39;delta&#39;</span><span class="p">},</span> <span class="s1">&#39;logs&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;trying delta&#39;</span><span class="p">,</span> <span class="s1">&#39;skipping aa&#39;</span><span class="p">]}</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">def</span> <span class="nf">book_car_task</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;COMPLETED&#39;</span><span class="p">,</span> <span class="s1">&#39;output&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;booking_ref&#39;</span><span class="p">:</span> <span class="s2">&quot;84545fdfd&quot;</span><span class="p">,</span> <span class="s1">&#39;agency&#39;</span><span class="p">:</span> <span class="s1">&#39;hertz&#39;</span><span class="p">},</span> <span class="s1">&#39;logs&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;trying hertz&#39;</span><span class="p">]}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting Travel Booking workflows&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">cc</span> <span class="o">=</span> <span class="n">ConductorWorker</span><span class="p">(</span><span class="s1">&#39;http://localhost:8080/api&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">cc</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;book_flight&#39;</span><span class="p">,</span> <span class="n">book_flight_task</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="n">cc</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s1">&#39;book_car&#39;</span><span class="p">,</span> <span class="n">book_car_task</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="conductorworker-parameters"><code>ConductorWorker</code> parameters</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">server_url</span><span class="p">:</span> <span class="nb">str</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">The</span> <span class="n">url</span> <span class="n">to</span> <span class="n">the</span> <span class="n">server</span> <span class="n">hosting</span> <span class="n">the</span> <span class="n">conductor</span> <span class="n">api</span><span class="o">.</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">Ex</span><span class="p">:</span> <span class="s1">&#39;http://localhost:8080/api&#39;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">thread_count</span><span class="p">:</span> <span class="nb">int</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">threads</span> <span class="n">that</span> <span class="n">will</span> <span class="n">be</span> <span class="n">polling</span> <span class="k">for</span> <span class="ow">and</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">executing</span> <span class="n">tasks</span> <span class="ow">in</span> <span class="n">case</span> <span class="n">of</span> <span class="n">using</span> <span class="n">the</span> <span class="n">start</span> <span class="n">method</span><span class="o">.</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">polling_interval</span><span class="p">:</span> <span class="nb">float</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">seconds</span> <span class="n">that</span> <span class="n">each</span> <span class="n">worker</span> <span class="n">thread</span> <span class="n">will</span> <span class="n">wait</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">between</span> <span class="n">polls</span> <span class="n">to</span> <span class="n">the</span> <span class="n">conductor</span> <span class="n">server</span><span class="o">.</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">worker_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">optional</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">The</span> <span class="n">worker_id</span> <span class="n">of</span> <span class="n">the</span> <span class="n">worker</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">going</span> <span class="n">to</span> <span class="n">execute</span> <span class="n">the</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">task</span><span class="o">.</span> <span class="n">For</span> <span class="n">further</span> <span class="n">details</span><span class="p">,</span> <span class="n">refer</span> <span class="n">to</span> <span class="n">the</span> <span class="n">documentation</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="n">By</span> <span class="n">default</span><span class="p">,</span> <span class="n">it</span> <span class="ow">is</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">hostname</span> <span class="n">of</span> <span class="n">the</span> <span class="n">machine</span>
-</code></pre></div>
-<h3 id="start-method-parameters"><code>start</code> method parameters</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>taskType: str
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    The name of the task that the worker is looking to execute
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>exec_function: function
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    The function that the worker will execute. The function
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    must return a dict with the `status`, `output` and `logs`
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    keys present. If this is not present, an Exception will be
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    raised
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>wait: bool
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    Whether the worker will block execution of further code.
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    Since the workers are being run in daemon threads, when the
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    program completes execution, all the threads are destroyed.
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    Setting wait to True prevents the program from ending.
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    If multiple workers are being called from the same program,
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    all but the last start call but have wait set to False.
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    The last start call must always set wait to True. If a
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    single worker is being called, set wait to True.
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>domain: str, optional
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    The domain of the task under which the worker will run. For
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    further details refer to the conductor server documentation
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    By default, it is set to None
-</code></pre></div>
-<p>See 
-<a href="https://github.com/swift-conductor/conductor/tree/main/polyglot-clients/python">https://github.com/swift-conductor/conductor/tree/main/polyglot-clients/python</a>
-for the source code.</p>
+<p><a href="https://github.com/swift-conductor/conductor-client-python/tree/main/docs/worker.md">Create and run task workers</a></p>
 
 
 
