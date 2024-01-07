@@ -604,13 +604,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#swift-conductor-core-server" class="md-nav__link">
+  <a href="#swift-conductor-core" class="md-nav__link">
     <span class="md-ellipsis">
-      Swift Conductor Core Server
+      Swift Conductor Core
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Swift Conductor Core Server">
+    <nav class="md-nav" aria-label="Swift Conductor Core">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -661,13 +661,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#swift-conductor-ce-community-edition" class="md-nav__link">
+  <a href="#swift-conductor-ce" class="md-nav__link">
     <span class="md-ellipsis">
-      Swift Conductor CE (Community Edition)
+      Swift Conductor CE
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Swift Conductor CE (Community Edition)">
+    <nav class="md-nav" aria-label="Swift Conductor CE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3645,13 +3645,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#swift-conductor-core-server" class="md-nav__link">
+  <a href="#swift-conductor-core" class="md-nav__link">
     <span class="md-ellipsis">
-      Swift Conductor Core Server
+      Swift Conductor Core
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Swift Conductor Core Server">
+    <nav class="md-nav" aria-label="Swift Conductor Core">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3702,13 +3702,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#swift-conductor-ce-community-edition" class="md-nav__link">
+  <a href="#swift-conductor-ce" class="md-nav__link">
     <span class="md-ellipsis">
-      Swift Conductor CE (Community Edition)
+      Swift Conductor CE
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Swift Conductor CE (Community Edition)">
+    <nav class="md-nav" aria-label="Swift Conductor CE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3786,19 +3786,13 @@
 
 
 <h1 id="running-conductor-using-docker">Running Conductor using Docker</h1>
-<p>In this article we will explore how you can set up Conductor on your local machine using Docker compose.
-The docker compose will bring up the following:</p>
-<ol>
-<li>Conductor API Server</li>
-<li>Conductor UI</li>
-<li>Elasticsearch for searching workflows</li>
-</ol>
+<p>In this article we will explore how you can set up Conductor on your local machine using Docker compose.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ol>
 <li>Docker: <a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a></li>
 <li>Recommended host with CPU and RAM to be able to run multiple docker containers (at-least 16GB RAM)</li>
 </ol>
-<h2 id="swift-conductor-core-server">Swift Conductor Core Server</h2>
+<h2 id="swift-conductor-core">Swift Conductor Core</h2>
 <h3 id="clone">Clone</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/swift-conductor/conductor.git
 </code></pre></div>
@@ -3811,11 +3805,20 @@ The docker compose will bring up the following:</p>
 <h4 id="use-docker-compose-to-bring-up-the-local-server">Use <code>docker-compose</code> to bring up the local server:</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>--detach
 </code></pre></div>
-<p>You can open the Server and UI URLs in your browser to verify that they are running correctly:</p>
+<p>The docker compose will bring up the following containers:</p>
+<ol>
+<li>Swift Conductor Core Server</li>
+<li>Redis for database and task queue</li>
+<li>Elasticsearch v6 for searching workflows</li>
+</ol>
+<p>You can open the server URL in your browser to verify that they are running correctly:</p>
 <ul>
-<li>Server: http://localhost:8080</li>
+<li>Server: <a href="http://localhost:8080">http://localhost:8080</a></li>
 </ul>
-<h2 id="swift-conductor-ce-community-edition">Swift Conductor CE (Community Edition)</h2>
+<h2 id="swift-conductor-ce">Swift Conductor CE</h2>
+<blockquote>
+<p>CE == Community Edition</p>
+</blockquote>
 <h3 id="clone_1">Clone</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/swift-conductor/conductor-community.git
 </code></pre></div>
@@ -3851,17 +3854,24 @@ The docker compose will bring up the following:</p>
 <p>For example this will start the server instance backed by a Redis database, Redis queue, and ElasticSearch index.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker-compose<span class="w"> </span>--file<span class="w"> </span>docker-compose-redis.yaml<span class="w"> </span>up<span class="w"> </span>--detach
 </code></pre></div>
+<p>The docker compose will bring up the following containers:</p>
+<ol>
+<li>Swift Conductor CE Server </li>
+<li>Swift Conductor UI</li>
+<li>Redis for database and task queue</li>
+<li>Elasticsearch v7 for searching workflows</li>
+</ol>
 <p>You can open the Server and UI URLs in your browser to verify that they are running correctly:</p>
 <ul>
 <li>Server: <a href="http://localhost:8080">http://localhost:8080</a></li>
 <li>UI: <a href="http://localhost:5000">http://localhost:5000</a></li>
 </ul>
 <h2 id="monitoring-with-prometheus">Monitoring with Prometheus</h2>
-<p>Start Prometheus only with:</p>
+<p>Start Prometheus only:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker-compose<span class="w"> </span>--file<span class="w"> </span>docker-compose-prometheus.yaml<span class="w"> </span>up<span class="w"> </span>--detach
 </code></pre></div>
-<p>Open Prometheus (<a href="http://localhost:9090">http://localhost:9090</a>) in your browser:</p>
-<p>(Optionally) Start Prometheus and Grafana with:</p>
+<p><strong>or</strong></p>
+<p>Start Prometheus and Grafana (optional):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker-compose<span class="w"> </span>--file<span class="w"> </span>docker-compose-prometheus-grafana.yaml<span class="w"> </span>up<span class="w"> </span>--detach
 </code></pre></div>
 <p>Open Prometheus - <a href="http://localhost:9090">http://localhost:9090</a> and Grafana - <a href="http://localhost:3000">http://localhost:3000</a> in your browser (use admin / admin to login to Grafana).</p>
