@@ -3672,7 +3672,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./gradlew<span class="w"> </span>server
 </code></pre></div>
 <p>Navigate to the Swagger API docs:</p>
-<p><a href="http://localhost:8080/swagger-ui/index.html?configUrl=/api-docs/swagger-config">http://localhost:8080/swagger-ui/index.html?configUrl=/api-docs/swagger-config</a></p>
+<p><a href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a></p>
 <p><img alt="swagger" src="swagger.png" /></p>
 <blockquote>
 <p><strong>NOTE for Mac with an Apple Silicon users</strong>: If you are using a new Mac with an Apple Silicon Chip, you must make a small change to <code>conductor/grpc/build.gradle</code> - adding "osx-x86_64" to two lines:</p>
@@ -3711,14 +3711,13 @@ Navigate to the Swagger API docs:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/swift-conductor/conductor-ui
 </code></pre></div>
 <h3 id="install-packages">Install packages</h3>
-<p>The UI is a standard <code>create-react-app</code> React Single Page Application (SPA). To get started, with Node 14 and <code>npm</code> installed, run <code>npm install</code> to retrieve package dependencies.</p>
+<p>You need Node 14 and <code>npm</code> installed. After that run <code>npm install</code> to install all packages:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>npm<span class="w"> </span>install
 </code></pre></div>
 <h3 id="run_1">Run</h3>
-<p>To run the UI on the bundled development server, run <code>npm run start</code>. Navigate your browser to <code>http://localhost:5000</code>. The Conductor server must already be running on port 8080. </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npm<span class="w"> </span>run<span class="w"> </span>start
 </code></pre></div>
-<p>Launch UI <a href="http://localhost:5000">http://localhost:5000</a></p>
+<p>Open <a href="http://localhost:5000">http://localhost:5000</a> in your browser. </p>
 <p><img alt="conductor ui" src="conductorUI.png" /></p>
 <p>If you require compiled assets to host on a production web server, the project can be built with the command <code>npm run build</code>.</p>
 
