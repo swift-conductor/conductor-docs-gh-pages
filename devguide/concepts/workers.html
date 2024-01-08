@@ -2070,7 +2070,7 @@
         
   
   <span class="md-ellipsis">
-    Worker Tasks
+    Custom Tasks
   </span>
   
 
@@ -3486,15 +3486,15 @@
 
 
 <h1 id="workers">Workers</h1>
-<p>A worker is responsible for executing a task. Workers can be implemented in any language, and Conductor provides a polyglot set of worker frameworks that provide features such as polling threads, metrics and server communication that makes creating workers easy.</p>
-<p>Each worker embodies the Microservice design pattern and follows certain basic principles:</p>
+<p>A worker is responsible for executing a custom task. Workers can be implemented in any language, and Swift Conductor comes with Client SDKs that provide features such as polling threads, metrics, and server communication that makes creating workers easy.</p>
+<p>Each worker adheres to the the Microservice design pattern and follows certain basic principles:</p>
 <ol>
 <li>Workers are stateless and do not implement a workflow specific logic.  </li>
 <li>Each worker executes a very specific task and produces well defined output given specific inputs.</li>
 <li>Workers are meant to be idempotent (or should handle cases where the task that partially executed gets rescheduled due to timeouts etc.)</li>
 <li>Workers do not implement the logic to handle retries etc, that is taken care by the Conductor server.</li>
 </ol>
-<p>Conductor maintains a registry of worker tasks.  A task MUST be registered before being used in a workflow. This can be done by creating and saving a <strong>Task Definition</strong>.</p>
+<p>Conductor maintains a registry of custom tasks.  A task MUST be registered before being used in a workflow. This can be done by creating and saving a <strong>Task Definition</strong>.</p>
 
 
 

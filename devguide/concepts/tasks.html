@@ -2169,7 +2169,7 @@
         
   
   <span class="md-ellipsis">
-    Worker Tasks
+    Custom Tasks
   </span>
   
 
@@ -3675,11 +3675,11 @@
 <p>Task Configurations appear within the <code>tasks</code> array property of the Workflow Definition. This array is the blueprint that describes how a workflow will process an input payload by passing it through successive tasks.</p>
 <ul>
 <li>For all tasks, the configuration will specify what <strong>input parameters</strong> the task takes. </li>
-<li>For SIMPLE (worker based) tasks, the configuration will contain a reference to a registered worker <code>taskName</code>. </li>
+<li>For CUSTOM (worker based) tasks, the configuration will contain a reference to a registered worker <code>taskName</code>. </li>
 <li>For System Tasks and Operators, the task configuration will contain important parameters that control the behavior of the task. For example, the task configuration of an HTTP task will specify an endpoint URL and the template payload that it will be called with when the task executes.</li>
 </ul>
 <h2 id="task-definition">Task Definition</h2>
-<p>Not to be confused with Task Configurations, <a href="../../documentation/configuration/taskdef.html">Task Definitions</a> help define default task level parameters like inputs and outputs, timeouts, retries etc. for SIMPLE (i.e. worker implemented) tasks.</p>
+<p>Not to be confused with Task Configurations, <a href="../../documentation/configuration/taskdef.html">Task Definitions</a> help define default task level parameters like inputs and outputs, timeouts, retries etc. for CUSTOM (i.e. worker implemented) tasks.</p>
 <ul>
 <li>All simple tasks need to be registered before they can be used by active workflows.</li>
 <li>Task definitions can be registered via the UI, or through the API.</li>

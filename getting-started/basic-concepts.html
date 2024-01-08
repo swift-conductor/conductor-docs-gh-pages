@@ -631,18 +631,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
+  <a href="#workflow-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Tasks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Workflow
+      Workflow Definition
     </span>
   </a>
   
@@ -658,6 +649,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#task-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#system-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       System Tasks
@@ -667,9 +667,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#worker-tasks" class="md-nav__link">
+  <a href="#custom-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker Tasks
+      Custom Tasks
     </span>
   </a>
   
@@ -2150,7 +2150,7 @@
         
   
   <span class="md-ellipsis">
-    Worker Tasks
+    Custom Tasks
   </span>
   
 
@@ -3565,18 +3565,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
+  <a href="#workflow-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Tasks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Workflow
+      Workflow Definition
     </span>
   </a>
   
@@ -3592,6 +3583,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#task-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#system-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       System Tasks
@@ -3601,9 +3601,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#worker-tasks" class="md-nav__link">
+  <a href="#custom-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker Tasks
+      Custom Tasks
     </span>
   </a>
   
@@ -3630,23 +3630,23 @@
 <h1 id="basic-concepts">Basic Concepts</h1>
 <h2 id="definitions-aka-metadata-or-blueprints">Definitions (aka Metadata or Blueprints)</h2>
 <p>Conductor definitions are like class definitions in OOP paradigm, or templates. You define this once, and use for each workflow execution. Definitions to Executions have 1:N relationship.</p>
-<h2 id="tasks">Tasks</h2>
-<p>Tasks are the building blocks of Workflow. There must be at least one task in a Workflow.<br />
-Tasks can be categorized into two types: </p>
-<ul>
-<li><a href="../reference/systemtasks/index.html">System tasks</a> - executed by Conductor server.</li>
-<li><a href="../documentation/configuration/workerdef.html">Worker tasks</a> - executed by your own workers.</li>
-</ul>
-<h2 id="workflow">Workflow</h2>
-<p>A Workflow is the container of your process flow. It could include several different types of Tasks, Sub-Workflows, inputs and outputs connected to each other, to effectively achieve the desired result. The tasks are either control tasks (fork, conditional etc) or application tasks (e.g. encode a file) that are executed on a remote machine.</p>
+<h2 id="workflow-definition">Workflow Definition</h2>
+<p>A Workflow Definition is the container that describes your process. It contains tasks, sub-workflows, with inputs and outputs connected to each other in order to achieve the desired action. The tasks are either System Operators (e.g. fork, join, wait, switch, conditional, etc), System Tasks (e.g. HTTP, Inline, Human) or Custom Tasks (e.g. encode a file). The system operators and tasks are executed by the Swift Conductor server. The custom tasks are executed by a dedicated Worker on a remote machine.</p>
 <p><a href="../documentation/configuration/workflowdef/index.html">Detailed description</a></p>
 <h2 id="task-definition">Task Definition</h2>
-<p>Task definitions help define Task level parameters like inputs and outputs, timeouts, retries etc.</p>
+<p>Task definitions help define task level parameters like inputs and outputs, timeouts, retries etc.</p>
 <ul>
 <li>All tasks need to be registered before they can be used by active workflows.</li>
 <li>A task can be re-used within multiple workflows.</li>
 </ul>
 <p><a href="../documentation/configuration/taskdef.html">Detailed description</a></p>
+<h2 id="task-types">Task Types</h2>
+<p>Tasks are the building blocks of Workflow. There must be at least one task in a Workflow.<br />
+Tasks can be categorized into two types: </p>
+<ul>
+<li><a href="../reference/systemtasks/index.html">System tasks</a> - executed by Conductor server.</li>
+<li><a href="../documentation/configuration/workerdef.html">Custom tasks</a> - executed by your own workers.</li>
+</ul>
 <h2 id="system-tasks">System Tasks</h2>
 <p>System tasks are executed within the JVM of the Conductor server and managed by Conductor for its execution and scalability.</p>
 <p>See <a href="../reference/systemtasks/index.html">Systems tasks</a> for list of available Task types, and instructions for using them.</p>
@@ -3654,9 +3654,9 @@ Tasks can be categorized into two types: </p>
 <p class="admonition-title">Note</p>
 <p>Conductor provides an API to create user defined tasks that are executed in the same JVM as the engine. See <a href="https://github.com/swift-conductor/conductor/blob/main/core/src/main/java/com/swiftconductor/conductor/core/execution/tasks/WorkflowSystemTask.java">WorkflowSystemTask</a> interface for details.</p>
 </div>
-<h2 id="worker-tasks">Worker Tasks</h2>
-<p>Worker tasks are implemented by your application(s) and run in a separate environment from Conductor. The worker tasks can be implemented in any language.  These tasks talk to Conductor server via REST/gRPC to poll for tasks and update its status after execution.</p>
-<p>Worker tasks are identified by task type <strong>SIMPLE</strong> in the blueprint.</p>
+<h2 id="custom-tasks">Custom Tasks</h2>
+<p>Custom tasks are implemented by your application(s) and run in a separate environment from Swift Conductor. The custom tasks can be implemented in any language.  These tasks talk to Conductor server via REST/gRPC to poll for tasks and update its status after execution.</p>
+<p>Custom tasks are identified by task type <strong>CUSTOM</strong> in the blueprint.</p>
 
 
 

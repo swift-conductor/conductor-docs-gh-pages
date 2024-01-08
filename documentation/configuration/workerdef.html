@@ -24,7 +24,7 @@
     
     
       
-        <title>Worker Tasks - Conductor Documentation</title>
+        <title>Custom Tasks - Conductor Documentation</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#worker-tasks" class="md-skip">
+        <a href="#custom-tasks" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Worker Tasks
+              Custom Tasks
             
           </span>
         </div>
@@ -2069,7 +2069,7 @@
         
   
   <span class="md-ellipsis">
-    Worker Tasks
+    Custom Tasks
   </span>
   
 
@@ -3485,8 +3485,8 @@
   
 
 
-<h1 id="worker-tasks">Worker Tasks</h1>
-<p>A worker is responsible for executing a worker task (<code>type=SIMPLE</code>). Operator and System Tasks are handled by the Conductor server, while user defined tasks (<code>type=SIMPLE</code>) need to have a worker created that awaits the work to be scheduled by the server for it to be executed.</p>
+<h1 id="custom-tasks">Custom Tasks</h1>
+<p>A worker is responsible for executing a worker task (<code>type=CUSTOM</code>). Operator and System Tasks are handled by the Conductor server, while user defined tasks (<code>type=CUSTOM</code>) need to have a worker created that awaits the work to be scheduled by the server for it to be executed.</p>
 <p>Worker implementation should follow these basic design principles:</p>
 <ol>
 <li>Workers are stateless and do not implement a workflow specific logic.  </li>

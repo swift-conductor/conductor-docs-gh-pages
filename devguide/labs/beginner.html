@@ -2196,7 +2196,7 @@
         
   
   <span class="md-ellipsis">
-    Worker Tasks
+    Custom Tasks
   </span>
   
 
@@ -3747,7 +3747,7 @@
 </li>
 </ul>
 <h3 id="creating-task-definitions">Creating Task definitions</h3>
-<p>Let's create the <a href="../../documentation/configuration/taskdef.html">task definition</a> for <code>verify_if_idents_are_added</code> in JSON. This task will be a <em>SIMPLE</em> task which is supposed to be executed by an Idents microservice. We'll be mocking the Idents microservice part.</p>
+<p>Let's create the <a href="../../documentation/configuration/taskdef.html">task definition</a> for <code>verify_if_idents_are_added</code> in JSON. This task will be a <em>CUSTOM</em> task which is supposed to be executed by an Idents microservice. We'll be mocking the Idents microservice part.</p>
 <p><strong>Note</strong> that at this point, we don't have to specify whether it is a System task or Worker task. We are only specifying the required configurations for the task, like number of times it should be retried, timeouts etc. We shall start by using <code>name</code> parameter for task name.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;verify_if_idents_are_added&quot;</span>
@@ -3855,7 +3855,7 @@ i.e. if the task doesn't finish execution within this time limit after transitio
 <a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">            </span><span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">                </span><span class="nt">&quot;contentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workflow.input.contentId}&quot;</span>
 <a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">            </span><span class="p">},</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CUSTOM&quot;</span>
 <a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="p">]</span>
 <a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="p">}</span>
@@ -3884,7 +3884,7 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 <a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">            </span><span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">                </span><span class="nt">&quot;contentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workflow.input.contentId}&quot;</span>
 <a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">            </span><span class="p">},</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CUSTOM&quot;</span>
 <a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">        </span><span class="p">},</span>
 <a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">        </span><span class="p">{</span>
 <a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;switch_task&quot;</span><span class="p">,</span>
@@ -3915,7 +3915,7 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 <a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">            </span><span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">                </span><span class="nt">&quot;contentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workflow.input.contentId}&quot;</span>
 <a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">            </span><span class="p">},</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CUSTOM&quot;</span>
 <a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">        </span><span class="p">},</span>
 <a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">        </span><span class="p">{</span>
 <a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;switch_task&quot;</span><span class="p">,</span>
@@ -3935,7 +3935,7 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 <a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="w">                            </span><span class="nt">&quot;identType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workflow.input.identType}&quot;</span><span class="p">,</span>
 <a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="w">                            </span><span class="nt">&quot;contentId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workflow.input.contentId}&quot;</span>
 <a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="w">                        </span><span class="p">},</span>
-<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="w">                        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="w">                        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CUSTOM&quot;</span>
 <a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="w">                    </span><span class="p">}</span>
 <a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a><span class="w">                </span><span class="p">]</span>
 <a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a><span class="w">            </span><span class="p">}</span>
@@ -3960,7 +3960,7 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 <a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>            &quot;inputParameters&quot;: {
 <a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>                &quot;contentId&quot;: &quot;${workflow.input.contentId}&quot;
 <a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>            },
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>            &quot;type&quot;: &quot;SIMPLE&quot;
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>            &quot;type&quot;: &quot;CUSTOM&quot;
 <a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>        },
 <a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>        {
 <a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>            &quot;name&quot;: &quot;switch_task&quot;,
@@ -3980,7 +3980,7 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 <a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>                            &quot;identType&quot;: &quot;${workflow.input.identType}&quot;,
 <a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>                            &quot;contentId&quot;: &quot;${workflow.input.contentId}&quot;
 <a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>                        },
-<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>                        &quot;type&quot;: &quot;SIMPLE&quot;
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>                        &quot;type&quot;: &quot;CUSTOM&quot;
 <a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>                    }
 <a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>                ]
 <a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a>            }
@@ -4077,7 +4077,7 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 <p>You will notice that Workflow is in the state as below after sending the POST request:</p>
 <p><img alt="img" src="img/bgnr_systask_state.png" /></p>
 <p>Conductor has executed <code>is_idents_added</code> all through it's lifecycle, without us polling, or returning the status of Task. If it is still unclear, <code>is_idents_added</code> is a System task, and System tasks are executed by Conductor Server.</p>
-<p>But, <code>add_idents</code> is a SIMPLE task. So, the complete lifecycle of this task (Poll, Update) should be handled by a worker to continue with W\workflow execution. When Conductor has finished executing all the tasks in given flow, the workflow will reach Terminal state (COMPLETED, FAILED, TIMED_OUT etc.)</p>
+<p>But, <code>add_idents</code> is a CUSTOM task. So, the complete lifecycle of this task (Poll, Update) should be handled by a worker to continue with W\workflow execution. When Conductor has finished executing all the tasks in given flow, the workflow will reach Terminal state (COMPLETED, FAILED, TIMED_OUT etc.)</p>
 <h2 id="next-steps">Next steps</h2>
 <p>You can play around this workflow by failing one of the Tasks, restarting or retrying the Workflow, or by tuning the number of retries, timeoutSeconds etc.</p>
 

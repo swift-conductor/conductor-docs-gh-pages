@@ -2062,7 +2062,7 @@
         
   
   <span class="md-ellipsis">
-    Worker Tasks
+    Custom Tasks
   </span>
   
 
@@ -3474,7 +3474,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Workflow Properties">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow Tasks">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3512,21 +3521,6 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task-configurations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Task Configurations
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Task Configurations">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#using-expressions" class="md-nav__link">
@@ -3627,7 +3621,7 @@
 
 
 <h1 id="workflow-definition">Workflow Definition</h1>
-<p>The Workflow Definition contains all the information necessary to define the behavior of a workflow. The most important part of this definition is the <code>tasks</code> property, which is an array of <a href="#task-configurations"><strong>Task Configurations</strong></a>. </p>
+<p>The Workflow Definition contains all the information necessary to define the behavior of a workflow. The most important part of this definition is the <code>tasks</code> property, which is an array of <a href="#task-configurations"><strong>Workflow Tasks</strong></a>.</p>
 <h2 id="workflow-properties">Workflow Properties</h2>
 <table>
 <thead>
@@ -3725,41 +3719,14 @@
 </tr>
 </tbody>
 </table>
-<h3 id="failure-workflow">Failure Workflow</h3>
-<p>The failure workflow gets the <em>original failed workflow’s input</em> along with 3 additional items,</p>
+<h2 id="workflow-tasks">Workflow Tasks</h2>
+<p>The <code>tasks</code> property in a Workflow Definition defines an array of <em>Workflow Tasks</em>. This is the blueprint for the workflow. Workflow Tasks can reference different types of Tasks.</p>
 <ul>
-<li><code>workflowId</code> - The id of the failed workflow which triggered the failure workflow.</li>
-<li><code>reason</code> - A string containing the reason for workflow failure.</li>
-<li><code>failureStatus</code> - A string status representation of the failed workflow.</li>
-<li><code>failureTaskId</code> - The id of the failed task of the workflow that triggered the failure workflow.</li>
-</ul>
-<h3 id="timeout-policy">Timeout Policy</h3>
-<ul>
-<li>TIME_OUT_WF: Workflow is marked as TIMED_OUT and terminated</li>
-<li>ALERT_ONLY: Registers a counter (workflow_failure with status tag set to <code>TIMED_OUT</code>)</li>
-</ul>
-<h3 id="workflow-status-listener">Workflow Status Listener</h3>
-<p>Setting the <code>workflowStatusListenerEnabled</code> field in your Workflow Definition to <code>true</code> enables notifications.</p>
-<p>To add a custom implementation of the Workflow Status Listener. Refer to <a href="../../advanced/extend.html#workflow-status-listener">this</a> .</p>
-<p>The listener can be implemented in such a way as to either send a notification to an external system or to send an event on the conductor queue to complete/fail another task in another workflow as described <a href="../eventhandlers.html">here</a>.</p>
-<h3 id="default-input-with-inputtemplate">Default Input with <code>inputTemplate</code></h3>
-<ul>
-<li><code>inputTemplate</code> allows you to define default input values, which can optionally be overridden at runtime (when the workflow is invoked).</li>
-<li>Eg: In your Workflow Definition, you can define your inputTemplate as:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;inputTemplate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://some_url:7004&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
-</code></pre></div>
-<p>And <code>url</code> would be <code>https://some_url:7004</code> if no <code>url</code> was provided as input to your workflow.</p>
-<h2 id="task-configurations">Task Configurations</h2>
-<p>The <code>tasks</code> property in a Workflow Definition defines an array of <em>Task Configurations</em>. This is the blueprint for the workflow. Task Configurations can reference different types of Tasks.</p>
-<ul>
-<li>Simple Tasks</li>
 <li>System Tasks</li>
-<li>Operators</li>
+<li>System Operators</li>
+<li>Custom Tasks</li>
 </ul>
-<p>Note: Task Configuration should not be confused with <strong>Task Definitions</strong>, which are used to register SIMPLE (worker based) tasks.</p>
+<p>Note: Task Configuration should not be confused with <strong>Task Definitions</strong>, which are used to register CUSTOM (worker based) tasks.</p>
 <table>
 <thead>
 <tr>
@@ -3779,13 +3746,13 @@
 <tr>
 <td style="text-align: left;">taskReferenceName</td>
 <td style="text-align: left;">string</td>
-<td style="text-align: left;">Alias used to refer the task within the workflow.  MUST be unique within workflow.</td>
+<td style="text-align: left;">Alias used to refer the task within the workflow. MUST be unique within workflow.</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">type</td>
 <td style="text-align: left;">string</td>
-<td style="text-align: left;">Type of task. SIMPLE for tasks executed by remote workers, or one of the system task types</td>
+<td style="text-align: left;">Type of task. CUSTOM for tasks executed by remote workers, or one of the system task types</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
@@ -3797,7 +3764,7 @@
 <tr>
 <td style="text-align: left;">optional</td>
 <td style="text-align: left;">boolean</td>
-<td style="text-align: left;">true  or false.  When set to true - workflow continues even if the task fails.  The status of the task is reflected as <code>COMPLETED_WITH_ERRORS</code></td>
+<td style="text-align: left;">true or false. When set to true - workflow continues even if the task fails. The status of the task is reflected as <code>COMPLETED_WITH_ERRORS</code></td>
 <td style="text-align: left;">Defaults to <code>false</code></td>
 </tr>
 <tr>
@@ -3827,6 +3794,33 @@
 </tbody>
 </table>
 <p>In addition to these parameters, System Tasks have their own parameters. Check out <a href="../../../reference/systemtasks/index.html">System Tasks</a> for more information.</p>
+<h3 id="failure-workflow">Failure Workflow</h3>
+<p>The failure workflow gets the <em>original failed workflow’s input</em> along with 3 additional items,</p>
+<ul>
+<li><code>workflowId</code> - The id of the failed workflow which triggered the failure workflow.</li>
+<li><code>reason</code> - A string containing the reason for workflow failure.</li>
+<li><code>failureStatus</code> - A string status representation of the failed workflow.</li>
+<li><code>failureTaskId</code> - The id of the failed task of the workflow that triggered the failure workflow.</li>
+</ul>
+<h3 id="timeout-policy">Timeout Policy</h3>
+<ul>
+<li>TIME_OUT_WF: Workflow is marked as TIMED_OUT and terminated</li>
+<li>ALERT_ONLY: Registers a counter (workflow_failure with status tag set to <code>TIMED_OUT</code>)</li>
+</ul>
+<h3 id="workflow-status-listener">Workflow Status Listener</h3>
+<p>Setting the <code>workflowStatusListenerEnabled</code> field in your Workflow Definition to <code>true</code> enables notifications.</p>
+<p>To add a custom implementation of the Workflow Status Listener. Refer to <a href="../../advanced/extend.html#workflow-status-listener">this</a> .</p>
+<p>The listener can be implemented in such a way as to either send a notification to an external system or to send an event on the conductor queue to complete/fail another task in another workflow as described <a href="../eventhandlers.html">here</a>.</p>
+<h3 id="default-input-with-inputtemplate">Default Input with <code>inputTemplate</code></h3>
+<ul>
+<li><code>inputTemplate</code> allows you to define default input values, which can optionally be overridden at runtime (when the workflow is invoked).</li>
+<li>Example: In your Workflow Definition, you can define your inputTemplate as:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;inputTemplate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://some_url:7004&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</code></pre></div>
+<p>And the default <code>url</code> would be <code>https://some_url:7004</code> if no <code>url</code> was provided as input to your workflow.</p>
 <h3 id="using-expressions">Using Expressions</h3>
 <p>Each executed task is given an input based on the <code>inputParameters</code> template or the <code>inputExpression</code> configured in the task configuration. Only one of <code>inputParameters</code> or <code>inputExpression</code> can be used in a task.</p>
 <h4 id="inputparameters">inputParameters</h4>
@@ -3860,12 +3854,12 @@
 </table>
 <div class="admonition note">
 <p class="admonition-title">JSON Path Support</p>
-<p>Conductor supports <a href="http://goessner.net/articles/JsonPath/">JSONPath</a> specification and uses Java implementation from <a href="https://github.com/jayway/JsonPath">here</a>.</p>
 </div>
+<p>Conductor supports <a href="http://goessner.net/articles/JsonPath/">JSONPath</a> specification and uses Java implementation from <a href="https://github.com/jayway/JsonPath">here</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Escaping expressions</p>
-<p>To escape an expression, prefix it with an extra <em>$</em> character (ex.: <code>$${workflow.input...}</code>).</p>
 </div>
+<p>To escape an expression, prefix it with an extra <em>$</em> character (ex.: <code>$${workflow.input...}</code>).</p>
 <h4 id="inputexpression">inputExpression</h4>
 <p><code>inputExpression</code> can be used to select an entire object from the workflow input, or the output of another task. The field supports all <a href="https://github.com/json-path/JsonPath#what-is-returned-when">definite</a> JSONPath expressions.</p>
 <p>The syntax for mapping values in <code>inputExpression</code> follows the pattern,</p>
@@ -3879,7 +3873,7 @@
 <p>Assume your business logic is to simply to get some shipping information and then do the shipping. You start by
 logically partitioning them into two tasks:</p>
 <ol>
-<li><em>shipping_info</em> - The first task takes the provided account number, and outputs an address.  </li>
+<li><em>shipping_info</em> - The first task takes the provided account number, and outputs an address.</li>
 <li><em>shipping_task</em> - The 2nd task takes the address info and generates a shipping label.</li>
 </ol>
 <p>We can configure these two tasks in the <code>tasks</code> array of our Workflow Definition. Let's assume that <code>shipping info</code> takes an account number, and returns a name and address.</p>
@@ -3894,7 +3888,7 @@ logically partitioning them into two tasks:</p>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">&quot;inputParameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nt">&quot;account&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${workflow.input.accountNumber}&quot;</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="p">},</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CUSTOM&quot;</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="p">},</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">{</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;shipping_task&quot;</span><span class="p">,</span>
@@ -3904,9 +3898,9 @@ logically partitioning them into two tasks:</p>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="nt">&quot;streetAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${shipping_info_ref.output.streetAddress}&quot;</span><span class="p">,</span>
 <a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${shipping_info_ref.output.city}&quot;</span><span class="p">,</span>
 <a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${shipping_info_ref.output.state}&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="nt">&quot;zipcode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${shipping_info_ref.output.zipcode}&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="nt">&quot;zipcode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${shipping_info_ref.output.zipcode}&quot;</span>
 <a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="p">},</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CUSTOM&quot;</span>
 <a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">  </span><span class="p">],</span>
 <a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">  </span><span class="nt">&quot;outputParameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -3922,7 +3916,7 @@ logically partitioning them into two tasks:</p>
 <a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">  </span><span class="nt">&quot;inputTemplate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
 <a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="p">}</span>
 </code></pre></div>
-<p>Upon completion of the 2 tasks, the workflow outputs the tracking number generated in the 2nd task.  If the workflow fails, a second workflow named <code>shipping_issues</code> is run.</p>
+<p>Upon completion of the 2 tasks, the workflow outputs the tracking number generated in the 2nd task. If the workflow fails, a second workflow named <code>shipping_issues</code> is run.</p>
 <h3 id="example-2-task-configuration">Example 2 - Task Configuration</h3>
 <p>Consider a task <code>http_task</code> with input configured to use input/output parameters from workflow and a task named <code>loc_task</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
@@ -3936,9 +3930,9 @@ logically partitioning them into two tasks:</p>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">{</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loc_task&quot;</span><span class="p">,</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">      </span><span class="nt">&quot;taskReferenceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loc_task_ref&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">      </span><span class="nt">&quot;taskType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">      </span><span class="err">...</span><span class="w">      </span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="p">},</span><span class="w">    </span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">      </span><span class="nt">&quot;taskType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">      </span><span class="err">...</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="p">},</span>
 <a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="p">{</span>
 <a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http_task&quot;</span><span class="p">,</span>
 <a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">      </span><span class="nt">&quot;taskReferenceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http_task_ref&quot;</span><span class="p">,</span>
@@ -3971,16 +3965,16 @@ logically partitioning them into two tasks:</p>
 <a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="p">}</span>
 </code></pre></div>
 <p>Consider the following as the <em>workflow input</em></p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;movieId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;movie_123&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;fileLocation&quot;</span><span class="p">:</span><span class="s2">&quot;s3://moviebucket/file123&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">&quot;recipe&quot;</span><span class="p">:</span><span class="s2">&quot;png&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;fileLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s3://moviebucket/file123&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">&quot;recipe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;png&quot;</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
 </code></pre></div>
-And the output of the <em>loc_task</em> as the following;</p>
+<p>And the output of the <em>loc_task</em> as the following;</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;fileId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file_xxx_yyy_zzz&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;languages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;en&quot;</span><span class="p">,</span><span class="s2">&quot;ja&quot;</span><span class="p">,</span><span class="s2">&quot;es&quot;</span><span class="p">]</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;languages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;en&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ja&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;es&quot;</span><span class="p">]</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
 </code></pre></div>
 <p>When scheduling the task, Conductor will merge the values from workflow input and <code>loc_task</code>'s output and create the input to the <code>http_task</code> as follows:</p>
@@ -3999,38 +3993,38 @@ And the output of the <em>loc_task</em> as the following;</p>
 <a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="p">},</span>
 <a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="nt">&quot;headers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="nt">&quot;Accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">        </span><span class="nt">&quot;Content-Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">      </span><span class="nt">&quot;Accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">      </span><span class="nt">&quot;Content-Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span>
 <a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="example-3-inputexpression">Example 3 - inputExpression</h3>
-<p>Given the following task configuration:
+<p>Given the following task configuration:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loc_task&quot;</span><span class="p">,</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nt">&quot;taskReferenceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loc_task_ref&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">&quot;taskType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIMPLE&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">&quot;taskType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CUSTOM&quot;</span><span class="p">,</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">&quot;inputExpression&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nt">&quot;expression&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;workflow.input&quot;</span><span class="p">,</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JSON_PATH&quot;</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="p">}</span><span class="w">  </span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p">}</span>
-</code></pre></div></p>
-<p>When the workflow is invoked with the following <em>workflow input</em>
+</code></pre></div>
+<p>When the workflow is invoked with the following <em>workflow input</em></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;movieId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;movie_123&quot;</span><span class="p">,</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">&quot;fileLocation&quot;</span><span class="p">:</span><span class="s2">&quot;s3://moviebucket/file123&quot;</span><span class="p">,</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">&quot;recipe&quot;</span><span class="p">:</span><span class="s2">&quot;png&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">&quot;fileLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s3://moviebucket/file123&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">&quot;recipe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;png&quot;</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
-</code></pre></div></p>
-<p>When the task <code>loc_task</code> is scheduled, the entire workflow input object will be passed in as the task input:
+</code></pre></div>
+<p>When the task <code>loc_task</code> is scheduled, the entire workflow input object will be passed in as the task input:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">&quot;movieId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;movie_123&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nt">&quot;fileLocation&quot;</span><span class="p">:</span><span class="s2">&quot;s3://moviebucket/file123&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="nt">&quot;recipe&quot;</span><span class="p">:</span><span class="s2">&quot;png&quot;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nt">&quot;fileLocation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s3://moviebucket/file123&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="nt">&quot;recipe&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;png&quot;</span>
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 
 
 

@@ -2056,7 +2056,7 @@
         
   
   <span class="md-ellipsis">
-    Worker Tasks
+    Custom Tasks
   </span>
   
 
@@ -3791,7 +3791,7 @@ task does the core job and <code>FORK_JOIN_DYNAMIC</code> manages the orchestrat
 <tbody>
 <tr>
 <td>*dynamicForkTasksParam</td>
-<td>This is a JSON array of tasks or sub-workflow objects that needs to be forked and run in parallel (Note: This has a different format for <code>SUB_WORKFLOW</code> compared to <code>SIMPLE</code> tasks.)</td>
+<td>This is a JSON array of tasks or sub-workflow objects that needs to be forked and run in parallel (Note: This has a different format for <code>SUB_WORKFLOW</code> compared to <code>CUSTOM</code> tasks.)</td>
 </tr>
 <tr>
 <td>*dynamicForkTasksInputParamName</td>
@@ -3835,7 +3835,7 @@ the <code>FORK_JOIN_DYNAMIC</code> task that will prepare the input that needs t
 <li><code>dynamicForkTasksParam</code> the JSON array of tasks/subworkflows to be run in parallel. Each JSON object will have: </li>
 <li>A unique <code>taskReferenceName</code>.</li>
 <li>The name of the Task/Subworkflow to be called (note - the location of this key:value is different for a subworkflow).</li>
-<li>The type of the task (This is optional for SIMPLE tasks).</li>
+<li>The type of the task (This is optional for CUSTOM tasks).</li>
 <li><code>dynamicForkTasksInputParamName</code> a JSON map of input parameters for each task. The keys will be the unique <code>taskReferenceName</code> defined in the first JSON array, and the values will be the specific input parameters for the task/subworkflow.</li>
 </ul>
 <p>The <code>image_resize</code> task works to resize just one image. The <code>FORK_JOIN_DYNAMIC</code> and the following <code>JOIN</code> will manage the multiple invocations of the single <code>image_resize</code> task. The responsibilities are clearly broken out, where the individual  <code>image_resize</code>
@@ -3882,7 +3882,7 @@ tasks do the core job and <code>FORK_JOIN_DYNAMIC</code> manages the orchestrati
 <li><code>dynamicForkTasksParam</code> This is a JSON array of task or sub-workflow objects that specifies the list of tasks or sub-workflows that needs to be forked and run in parallel. This JSON varies depeding oon the type of task.  </li>
 </ul>
 <h4 id="dynamicforktasksparam-simple-task"><code>dynamicForkTasksParam</code> Simple task</h4>
-<p>In this case, our fork is running a SIMPLE task: <code>image_convert_resize</code>:</p>
+<p>In this case, our fork is running a CUSTOM task: <code>image_convert_resize</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{ &quot;dynamicTasks&quot;: [
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  {
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    &quot;name&quot;: :&quot;image_convert_resize&quot;,
