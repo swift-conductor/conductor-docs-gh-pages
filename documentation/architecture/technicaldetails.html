@@ -2438,6 +2438,8 @@
       
         
       
+        
+      
     
     
     
@@ -2506,11 +2508,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../clientsdks/java-sdk.html" class="md-nav__link">
+      <a href="../clientsdks/typescript-sdk.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Java Client SDK
+    TypeScript Client SDK
   </span>
   
 
@@ -2532,6 +2534,27 @@
   
   <span class="md-ellipsis">
     .NET Client SDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clientsdks/java-sdk.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java Client SDK
   </span>
   
 
@@ -2623,33 +2646,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#grpc-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      gRPC Framework
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cassandra-persistence" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cassandra Persistence
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#external-payload-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      External Payload Storage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#dynamic-workflow-executions" class="md-nav__link">
     <span class="md-ellipsis">
       Dynamic Workflow Executions
@@ -2659,31 +2655,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#decoupling-elasticsearch-from-persistence" class="md-nav__link">
+  <a href="#maintaining-workflow-consistency" class="md-nav__link">
     <span class="md-ellipsis">
-      Decoupling Elasticsearch from Persistence
+      Maintaining workflow consistency
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#elasticsearch-56-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Elasticsearch 5/6 Support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintaining-workflow-consistency-with-distributed-locking-and-fencing-tokens" class="md-nav__link">
-    <span class="md-ellipsis">
-      Maintaining workflow consistency with distributed locking and fencing tokens
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Maintaining workflow consistency with distributed locking and fencing tokens">
+    <nav class="md-nav" aria-label="Maintaining workflow consistency">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2699,6 +2677,25 @@
   <a href="#a-two-part-solution-to-maintain-workflow-consistency" class="md-nav__link">
     <span class="md-ellipsis">
       A two-part solution to maintain Workflow Consistency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A two-part solution to maintain Workflow Consistency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preventing-concurrent-decides-with-distributed-locking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing concurrent decides with distributed locking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preventing-stale-data-updates-with-fencing-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing stale data updates with fencing tokens
     </span>
   </a>
   
@@ -2720,13 +2717,17 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Alternative solution to distributed "decide" evaluation">
-      <ul class="md-nav__list">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
         
           <li class="md-nav__item">
-  <a href="#more-on-dyno-queues" class="md-nav__link">
+  <a href="#more-on-task-queues" class="md-nav__link">
     <span class="md-ellipsis">
-      More on dyno queues
+      More on Task Queues
     </span>
   </a>
   
@@ -2739,6 +2740,16 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Back to alternative solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#considering-other-downsides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considering other downsides
+    </span>
+  </a>
+  
 </li>
         
       </ul>
@@ -2748,6 +2759,51 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      gRPC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticsearch-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      ElasticSearch Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decoupling-elasticsearch-from-persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decoupling ElasticSearch from Persistence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cassandra-persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cassandra Persistence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-payload-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Payload Storage
+    </span>
+  </a>
   
 </li>
       
@@ -3633,9 +3689,144 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#grpc-framework" class="md-nav__link">
+  <a href="#dynamic-workflow-executions" class="md-nav__link">
     <span class="md-ellipsis">
-      gRPC Framework
+      Dynamic Workflow Executions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintaining-workflow-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintaining workflow consistency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintaining workflow consistency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-two-part-solution-to-maintain-workflow-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      A two-part solution to maintain Workflow Consistency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A two-part solution to maintain Workflow Consistency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preventing-concurrent-decides-with-distributed-locking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing concurrent decides with distributed locking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preventing-stale-data-updates-with-fencing-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventing stale data updates with fencing tokens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-desired-level-of-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up desired level of consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-solution-to-distributed-decide-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative solution to distributed "decide" evaluation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-on-task-queues" class="md-nav__link">
+    <span class="md-ellipsis">
+      More on Task Queues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#back-to-alternative-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Back to alternative solution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Back to alternative solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#considering-other-downsides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considering other downsides
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      gRPC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticsearch-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      ElasticSearch Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decoupling-elasticsearch-from-persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decoupling ElasticSearch from Persistence
     </span>
   </a>
   
@@ -3659,108 +3850,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#dynamic-workflow-executions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dynamic Workflow Executions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decoupling-elasticsearch-from-persistence" class="md-nav__link">
-    <span class="md-ellipsis">
-      Decoupling Elasticsearch from Persistence
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#elasticsearch-56-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Elasticsearch 5/6 Support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintaining-workflow-consistency-with-distributed-locking-and-fencing-tokens" class="md-nav__link">
-    <span class="md-ellipsis">
-      Maintaining workflow consistency with distributed locking and fencing tokens
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Maintaining workflow consistency with distributed locking and fencing tokens">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Problem
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-two-part-solution-to-maintain-workflow-consistency" class="md-nav__link">
-    <span class="md-ellipsis">
-      A two-part solution to maintain Workflow Consistency
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#setting-up-desired-level-of-consistency" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setting up desired level of consistency
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alternative-solution-to-distributed-decide-evaluation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alternative solution to distributed "decide" evaluation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Alternative solution to distributed "decide" evaluation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#more-on-dyno-queues" class="md-nav__link">
-    <span class="md-ellipsis">
-      More on dyno queues
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#back-to-alternative-solution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Back to alternative solution
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3780,18 +3869,7 @@
 
 
 <h1 id="technical-details">Technical Details</h1>
-<h3 id="grpc-framework">gRPC Framework</h3>
-<p>As part of this addition, all of the modules and bootstrap code within them were refactored to leverage providers, which facilitated moving  the Jetty server into a separate module and the conformance to Guice guidelines and best practices. 
-This feature constitutes a server-side gRPC implementation along with protobuf RPC schemas for the workflow, metadata and task APIs that can be run concurrently with the Jersey-based HTTP/REST server. The protobuf models for all the types are exposed through the API. gRPC java clients for the workflow, metadata and task APIs are also available for use. Another valuable addition is an idiomatic Go gRPC client implementation for the worker API.
-The proto models are auto-generated at compile time using this ProtoGen library. This custom library adds messageInput and messageOutput fields to all proto tasks and task definitions. The goal of these fields is providing a type-safe way to pass input and input metadata through tasks that use the gRPC API. These fields use the Any protobuf type which can store any arbitrary message type in a type-safe way, without the server needing to know the exact serialization format of the message. In order to expose these Any objects in the REST API, a custom encoding is used that contains the raw data of the serialized message by converting it into a dictionary with '@type' and '@value' keys, where '@type' is identical to the canonical representation and '@value' contains a base64 encoded string with the binary data of the serialized message. The JsonMapperProvider provides the object mapper initialized with this module to enable serialization/deserialization of these JSON objects.</p>
-<h3 id="cassandra-persistence">Cassandra Persistence</h3>
-<p>The Cassandra persistence layer currently provides a partial implementation of the ExecutionDAO that supports all the CRUD operations for tasks and workflow execution. The data modelling is done in a denormalized manner and stored in two tables. The "workflows" table houses all the information for a workflow execution including all its tasks and is the source of truth for all the information regarding a workflow and its tasks. The "task_lookup" table, as the name suggests stores a lookup of taskIds to workflowId. This table facilitates the fast retrieval of task data given a taskId. 
-All the datastore operations that are used during the critical execution path of a workflow have been implemented currently. Few of the operational abilities of the ExecutionDAO are yet to be implemented. This module also does not provide implementations for QueueDAO, PollDataDAO and RateLimitingDAO. We envision using the Cassandra DAO with an external queue implementation, since implementing a queuing recipe on top of Cassandra is an anti-pattern that we want to stay away from.</p>
-<h3 id="external-payload-storage">External Payload Storage</h3>
-<p>The implementation of this feature is such that the externalization of payloads is fully transparent and automated to the user. Conductor operators can configure the usage of this feature and is completely abstracted and hidden from the user, thereby allowing the operators full control over the barrier limits. Currently, only AWS S3 is supported as a storage system, however, as with all other Conductor components, this is pluggable and can be extended to enable any other object store to be used as an external payload storage system.
-The externalization of payloads is enforced using two kinds of <a href="../advanced/externalpayloadstorage.html">barriers</a>. Soft barriers are used when the  payload size is warranted enough to be stored as part of workflow execution. These payloads will be stored in external storage and used during execution. Hard barriers are enforced to safeguard against voluminous data, and such payloads are rejected and the workflow execution is failed.
-The payload size is evaluated in the client before being sent over the wire to the server. If the payload size exceeds the configured soft limit, the client makes a request to the server for the location at which the payload is to be stored. In this case where S3 is being used, the server returns a signed url for the location and the client uploads the payload using this signed url. The relative path to the payload object is then stored in the workflow/task metadata. The server can then download this payload from this path and use as needed during execution. This allows the server to control access to the S3 bucket, thereby making the user applications where the worker processes are run completely agnostic of the permissions needed to access this location.</p>
-<h3 id="dynamic-workflow-executions">Dynamic Workflow Executions</h3>
+<h2 id="dynamic-workflow-executions">Dynamic Workflow Executions</h2>
 <p>In the earlier version (v1.x), Conductor allowed the execution of workflows referencing the workflow and task definitions stored as metadata in the system. This meant that a workflow execution with 10 custom tasks to run entailed:</p>
 <ul>
 <li>Registration of the 10 task definitions if they don't exist (assuming workflow task type CUSTOM for simplicity)</li>
@@ -3799,29 +3877,25 @@ The payload size is evaluated in the client before being sent over the wire to t
 <li>Each time a definition needs to be retrieved, a call to the metadata store needed to be performed</li>
 <li>In addition to that, the system allowed current metadata that is in use to be altered, leading to possible inconsistencies/race conditions</li>
 </ul>
-<p>To eliminate these pain points, the execution was changed such that the workflow definition is embedded within the workflow execution and the task definitions are themselves embedded within this workflow definition. This enables the concept of ephemeral/dynamic workflows and tasks. Instead of fetching metadata definitions throughout the execution, the definitions are fetched and embedded into the execution at the start of the workflow execution. This also enabled the StartWorkflowRequest to be extended to provide the complete workflow definition that will be used during execution, thus removing the need for pre-registration. The MetadataMapperService prefetches the workflow and task definitions and embeds these within the workflow data, if not provided in the StartWorkflowRequest.</p>
+<p>To eliminate these pain points, the execution was changed such that the workflow definition is embedded within the workflow execution and the task definitions are themselves embedded within this workflow definition. </p>
+<p>This enables the concept of ephemeral/dynamic workflows and tasks. Instead of fetching metadata definitions throughout the execution, the definitions are fetched and embedded into the execution at the start of the workflow execution. </p>
+<p>This also enabled the StartWorkflowRequest to be extended to provide the complete workflow definition that will be used during execution, thus removing the need for pre-registration. The MetadataMapperService prefetches the workflow and task definitions and embeds these within the workflow data, if not provided in the StartWorkflowRequest.</p>
 <p>Following benefits are seen as a result of these changes:</p>
 <ul>
 <li>Grants immutability of the definition stored within the execution data against modifications to the metadata store</li>
 <li>Better testability of workflows with faster experimental changes to definitions</li>
 <li>Reduced stress on the datastore due to prefetching the metadata only once at the start</li>
 </ul>
-<h3 id="decoupling-elasticsearch-from-persistence">Decoupling Elasticsearch from Persistence</h3>
-<p>In the earlier version (1.x), the indexing logic was imbibed within the persistence layer, thus creating a tight coupling between the primary datastore and the indexing engine. This meant that the primary datastore determines how we orchestrate between the storage (redis, mysql, etc) and the indexer(elastic search). The main disadvantage of this approach is the lack of flexibility, that is, we cannot run an in-memory database and external elastic search or vice-versa.
-We plan to improve this further by removing the indexing from the critical path of workflow execution, thus reducing possible points of failure during execution.</p>
-<h3 id="elasticsearch-56-support">Elasticsearch 5/6 Support</h3>
-<p>Indexing workflow execution is one of the primary features of Conductor. This enables archival of terminal state workflows from the primary data store, along with providing a clean search capability from the UI. 
-In Conductor 1.x, we supported both versions 2 and 5 of Elasticsearch by shadowing version 5 and all its dependencies. This proved to be rather tedious increasing build times by over 10 minutes. In Conductor 2.x, we have removed active support for ES 2.x, because of valuable community contributions for elasticsearch 5 and elasticsearch 6 modules. Unlike Conductor 1.x, Conductor 2.x supports elasticsearch 5 by default, which can easily be replaced with version 6 by following the simple instructions <a href="https://github.com/swift-conductor/conductor/tree/main/es6-persistence#build">here</a>.</p>
-<h3 id="maintaining-workflow-consistency-with-distributed-locking-and-fencing-tokens">Maintaining workflow consistency with distributed locking and fencing tokens</h3>
-<h4 id="problem">Problem</h4>
+<h2 id="maintaining-workflow-consistency">Maintaining workflow consistency</h2>
+<h3 id="problem">Problem</h3>
 <p>Conductor’s Workflow decide is the core logic which recursively evaluates the state of the workflow, schedules tasks, persists workflow and task(s) state at several checkpoints, and progresses the workflow.</p>
 <p>In a multi-node Conductor server deployment, the decide on a workflow can be triggered concurrently. For example, the worker can update Conductor server with latest task state, which calls decide, while the sweeper service (which periodically evaluates the workflow state to progress from task timeouts) would also call the decide on a different instance. The decide can be run concurrently in two different jvm nodes with two different workflow states, and based on the workflow configuration and current state, the result could be inconsistent.</p>
-<h4 id="a-two-part-solution-to-maintain-workflow-consistency">A two-part solution to maintain Workflow Consistency</h4>
-<p><strong>Preventing concurrent decides with distributed locking:</strong>
-The goal is to allow only one decide to run on a workflow at any given time across the whole Conductor Server cluster. This can be achieved by plugging in distributed locking implementations like Zookeeper, Redlock etc. A Zookeeper module implementing Conductor’s Locking service is provided.</p>
-<p><strong>Preventing stale data updates with fencing tokens:</strong>
-While the locking service helps to run one decide at a time, it might still be possible for nodes with timed out locks to reactivate and continue execution from where it left off (usually with stale data). This can be avoided with fencing tokens, which basically is an incrementing counter on workflow state with read-before-write support in a transaction or similar construct.</p>
-<p><em>At Netflix, we use Cassandra. Considering the tradeoffs of Cassandra’s Lightweight Transactions (LWT) and the probability of this stale updates happening, and our testing results, we’ve decided to first only rollout distributed locking with Zookeeper. We'll monitor our system and add C</em> LWT if needed.</p>
+<h3 id="a-two-part-solution-to-maintain-workflow-consistency">A two-part solution to maintain Workflow Consistency</h3>
+<h4 id="preventing-concurrent-decides-with-distributed-locking">Preventing concurrent decides with distributed locking</h4>
+<p>The goal is to allow only one decide to run on a workflow at any given time across the whole Conductor Server cluster. This can be achieved by plugging in distributed locking implementations like Zookeeper, Redlock etc. A Zookeeper module implementing Conductor’s Locking service is provided.</p>
+<h4 id="preventing-stale-data-updates-with-fencing-tokens">Preventing stale data updates with fencing tokens</h4>
+<p>While the locking service helps to run one decide at a time, it might still be possible for nodes with timed out locks to reactivate and continue execution from where it left off (usually with stale data). This can be avoided with fencing tokens, which basically is an incrementing counter on workflow state with read-before-write support in a transaction or similar construct. </p>
+<p>We’ve decided to first only rollout distributed locking with Zookeeper.</p>
 <h4 id="setting-up-desired-level-of-consistency">Setting up desired level of consistency</h4>
 <p>Based on your requirements, it is possible to use none, one or both of the distributed locking and fencing tokens implementations.</p>
 <h4 id="alternative-solution-to-distributed-decide-evaluation">Alternative solution to distributed "decide" evaluation</h4>
@@ -3829,19 +3903,18 @@ While the locking service helps to run one decide at a time, it might still be p
 <blockquote>
 <p>Sweeper service is responsible for continually checking state of all workflows executions and trigger the "decide" logic which in turn can time the workflow out.</p>
 </blockquote>
-<p>In a single node deployment (single dynomite rack and single conductor server) this shouldn't be a problem. But when running multiple replicated dynomite racks and a conductor server on top of each rack, this might trigger the race condition described in previous section.</p>
+<p>In a single node deployment (single Dynomite / Redis cluster and single Conductor server) this shouldn't be a problem. But when running multiple replicated Dynomite / Redis clusters and a Conductor server on top of each cluster, this might trigger the race condition described in previous section.</p>
 <blockquote>
-<p>Dynomite rack is a single or multiple instance dynomite setup that holds all the data.</p>
-<p>More on dynomite HA setup: (https://netflixtechblog.com/introducing-dynomite-making-non-distributed-databases-distributed-c7bce3d89404)</p>
+<p>Dynomite / Redis cluster is a single or multiple instance Dynomite / Redis setup that holds all the data.</p>
+<p>More on Dynomite / Redis HA setup: (https://netflixtechblog.com/introducing-dynomite-making-non-distributed-databases-distributed-c7bce3d89404)</p>
 </blockquote>
 <p>In a cluster deployment, the default behavior for Dyno Queues is such, that it distributes the workload (round-robin style) to all the conductor servers.
 This can create a situation where the first task to be executed is queued for conductor server #1 but the sweeper service is queued for conductor server #2.</p>
-<h5 id="more-on-dyno-queues">More on dyno queues</h5>
-<p>Dyno queues are the default queuing mechanism of conductor.</p>
+<h3 id="more-on-task-queues">More on Task Queues</h3>
+<p><a href="https://github.com/Netflix/dyno-queues">Dyno Queues</a> are the default queuing mechanism of Conductor.</p>
 <p>Queues are allocated and used for:
 * Task execution - each task type gets a queue
-* Workflow execution - single queue with all currently executing workflows (deciderQueue)
-  * This queue is used by SweeperService</p>
+* Workflow execution - single queue with all currently executing workflows (deciderQueue). This queue is used by SweeperService.</p>
 <p><strong>Each conductor server instance gets its own set of queues</strong>. Or more precisely a queue shard of its own.
 This means that if you have 2 task types, you end up with 6 queues altogether e.g.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conductor_queues.test.QUEUE._deciderQueue.c
@@ -3853,11 +3926,11 @@ This means that if you have 2 task types, you end up with 6 queues altogether e.
 </code></pre></div>
 <blockquote>
 <p>The "c" and "d" suffixes are the shards identifying conductor server instace #1 and instance #2 respectively.</p>
-<p>The shard names are extracted from dynomite rack name such as us-east-1c that is set in "LOCAL_RACK" or "EC2_AVAILABILTY_ZONE"</p>
+<p>The shard names are extracted from the Dynomite rack name such as <code>us-east-1c</code>. That is set to either <code>"LOCAL_RACK"</code> or <code>{EC2_AVAILABILTY_ZONE}</code>.</p>
 </blockquote>
 <p>Considering an execution of a simple workflow with just 2 tasks: [HTTP, LAMBDA], you should end up with queues being filled as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Workflow execution    -&gt; conductor_queues.test.QUEUE._deciderQueue.c
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>HTTP taks execution   -&gt; conductor_queues.test.QUEUE.HTTP.d
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>HTTP task execution   -&gt; conductor_queues.test.QUEUE.HTTP.d
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>LAMBDA task execution -&gt; conductor_queues.test.QUEUE.LAMBDA.c
 </code></pre></div>
 <p>Which means that SweeperService in conductor instance #1 is responsible for sweeping the workflow, conductor #2 is responsible for executing HTTP task and conductor #1 again responsible for executing LAMBDA task.</p>
@@ -3865,26 +3938,52 @@ This means that if you have 2 task types, you end up with 6 queues altogether e.
 <blockquote>
 <p>The round-robin strategy responsible for work distribution is defined <a href="https://github.com/Netflix/dyno-queues/blob/1cde55bbb69acd631c671a0cb2f9db2419163e33/dyno-queues-redis/src/main/java/com/swiftconductor/dyno/queues/redis/sharding/RoundRobinStrategy.java">here</a></p>
 </blockquote>
-<h5 id="back-to-alternative-solution">Back to alternative solution</h5>
-<p>The alternative solution here is <strong>Switching round-robin queue allocation for a local-only strategy</strong>.
-Meaning that a workflow and its task executions are queued only for the conductor instance which started the workflow.</p>
-<p>This completely avoids the race condition for the price of removing task execution distribution.</p>
+<h3 id="back-to-alternative-solution">Back to alternative solution</h3>
+<p>The alternative solution here is switching <code>round-robin</code> queue allocation for a <code>local-only</code> strategy. The <code>local-only</code> strategy meaning that a workflow and its task executions are queued only for the Conductor instance which started the workflow. </p>
 <p>Since all tasks and the sweeper service read/write only from/to "local" queues, it is impossible to run into a race condition between conductor instances.</p>
-<p>The downside here is that the workload is not distributed across all conductor servers. Which might be an advantage in active-standby deployments.</p>
-<p>Considering other downsides ...</p>
-<p>Considering a situation where a conductor instance goes down:
-* With local-only strategy, the workflow executions from failed conductor instance will not progress until:
+<p>This completely avoids the race condition for the price of removing task execution distribution.</p>
+<p>The downside here is that the workload is not distributed across all Conductor servers. Which might be an advantage in active-standby deployments.</p>
+<h4 id="considering-other-downsides">Considering other downsides</h4>
+<p>For example in a situation where a Conductor instance goes down:</p>
+<p>With <code>local-only</code> strategy, the workflow executions from failed conductor instance will not progress until:
   * The conductor instance is restarted or
-  * The executions are manually terminated and restarted from a different node
-* With round-robin strategy, there is a chance the tasks will be rescheduled on a different conductor node
-  * This is nondeterministic though</p>
-<p><strong>Enabling local only queue allocation strategy for dyno queues:</strong></p>
+  * The executions are manually terminated and restarted from a different node</p>
+<p>With <code>round-robin</code> strategy, there is a chance the tasks will be rescheduled on a different Conductor node. However this is nondeterministic.</p>
+<p><strong>Enabling local only queue allocation strategy for Dynomite / Redis queues:</strong></p>
 <p>Just enable following setting the config.properties:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>workflow.dyno.queue.sharding.strategy=localOnly
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="na">workflow.dyno.queue.sharding.strategy</span><span class="o">=</span><span class="s">localOnly</span>
 </code></pre></div>
 <blockquote>
 <p>The default is roundRobin</p>
 </blockquote>
+<h2 id="grpc">gRPC</h2>
+<p>As part of this addition, all of the modules and bootstrap code within them were refactored to leverage providers, which facilitated moving  the Jetty server into a separate module and the conformance to Guice guidelines and best practices. </p>
+<p>This feature constitutes a server-side gRPC implementation along with protobuf RPC schemas for the workflow, metadata and task APIs that can be run concurrently with the Jersey-based HTTP/REST server. The protobuf models for all the types are exposed through the API. gRPC java clients for the workflow, metadata and task APIs are also available for use. Another valuable addition is an idiomatic Go gRPC client implementation for the worker API.</p>
+<p>The proto models are auto-generated at compile time using this ProtoGen library. This custom library adds messageInput and messageOutput fields to all proto tasks and task definitions. </p>
+<p>The goal of these fields is providing a type-safe way to pass input and input metadata through tasks that use the gRPC API. These fields use the Any protobuf type which can store any arbitrary message type in a type-safe way, without the server needing to know the exact serialization format of the message. </p>
+<p>In order to expose these Any objects in the REST API, a custom encoding is used that contains the raw data of the serialized message by converting it into a dictionary with '@type' and '@value' keys, where '@type' is identical to the canonical representation and '@value' contains a base64 encoded string with the binary data of the serialized message. </p>
+<p>The JsonMapperProvider provides the object mapper initialized with this module to enable serialization/deserialization of these JSON objects.</p>
+<h2 id="elasticsearch-support">ElasticSearch Support</h2>
+<p>Indexing workflow execution is one of the primary features of Conductor. This enables archival of terminal state workflows from the primary data store, along with providing a clean search capability from the UI. </p>
+<p>In Conductor 1.x, we supported both versions 2 and 5 of Elasticsearch by shadowing version 5 and all its dependencies. This proved to be rather tedious increasing build times by over 10 minutes. </p>
+<p>In Conductor 2.x, we have removed active support for ES 2.x, because of valuable community contributions for elasticsearch 5 and elasticsearch 6 modules. </p>
+<p>Unlike Conductor 1.x, Conductor 2.x supports elasticsearch 5 by default, which can easily be replaced with version 6 if needed.</p>
+<h2 id="decoupling-elasticsearch-from-persistence">Decoupling ElasticSearch from Persistence</h2>
+<p>In the earlier version (1.x), the indexing logic was imbibed within the persistence layer, thus creating a tight coupling between the primary datastore and the indexing engine. </p>
+<p>This meant that the primary datastore determines how we orchestrate between the storage (redis, mysql, etc) and the indexer(elastic search). </p>
+<p>The main disadvantage of this approach is the lack of flexibility, that is, we cannot run an in-memory database and external elastic search or vice-versa.</p>
+<p>We plan to improve this further by removing the indexing from the critical path of workflow execution, thus reducing possible points of failure during execution.</p>
+<h2 id="cassandra-persistence">Cassandra Persistence</h2>
+<p>The Cassandra persistence layer currently provides a partial implementation of the ExecutionDAO that supports all the CRUD operations for tasks and workflow execution. The data modelling is done in a denormalized manner and stored in two tables. The "workflows" table houses all the information for a workflow execution including all its tasks and is the source of truth for all the information regarding a workflow and its tasks. The "task_lookup" table, as the name suggests stores a lookup of taskIds to workflowId. This table facilitates the fast retrieval of task data given a taskId. </p>
+<p>All the datastore operations that are used during the critical execution path of a workflow have been implemented currently. Few of the operational abilities of the ExecutionDAO are yet to be implemented. This module also does not provide implementations for QueueDAO, PollDataDAO and RateLimitingDAO. We envision using the Cassandra DAO with an external queue implementation, since implementing a queuing recipe on top of Cassandra is an anti-pattern that we want to stay away from.</p>
+<h2 id="external-payload-storage">External Payload Storage</h2>
+<p>The implementation of this feature is such that the externalization of payloads is fully transparent and automated to the user. Conductor operators can configure the usage of this feature and is completely abstracted and hidden from the user, thereby allowing the operators full control over the barrier limits. </p>
+<p>Currently, only AWS S3 is supported as a storage system, however, as with all other Conductor components, this is pluggable and can be extended to enable any other object store to be used as an external payload storage system.</p>
+<p>The externalization of payloads is enforced using two kinds of <a href="../advanced/externalpayloadstorage.html">barriers</a>. Soft barriers are used when the  payload size is warranted enough to be stored as part of workflow execution. These payloads will be stored in external storage and used during execution. Hard barriers are enforced to safeguard against voluminous data, and such payloads are rejected and the workflow execution is failed.</p>
+<p>The payload size is evaluated in the client before being sent over the wire to the server. If the payload size exceeds the configured soft limit, the client makes a request to the server for the location at which the payload is to be stored. </p>
+<p>In this case where S3 is being used, the server returns a signed url for the location and the client uploads the payload using this signed url. </p>
+<p>The relative path to the payload object is then stored in the workflow/task metadata. The server can then download this payload from this path and use as needed during execution. </p>
+<p>This allows the server to control access to the S3 bucket, thereby making the user applications where the worker processes are run completely agnostic of the permissions needed to access this location.</p>
 
 
 
