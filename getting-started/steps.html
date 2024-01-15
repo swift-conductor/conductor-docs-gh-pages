@@ -16,7 +16,7 @@
         <link rel="prev" href="basic-concepts.html">
       
       
-        <link rel="next" href="client.html">
+        <link rel="next" href="start-workflow.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -530,7 +530,7 @@
         
   
   <span class="md-ellipsis">
-    From Source
+    Building From Source
   </span>
   
 
@@ -551,7 +551,7 @@
         
   
   <span class="md-ellipsis">
-    Using Docker
+    Running using Docker
   </span>
   
 
@@ -643,29 +643,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#trigger-workflow-execution" class="md-nav__link">
+  <a href="#start-the-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Trigger Workflow Execution
+      Start the workflow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#polling-for-a-task" class="md-nav__link">
+  <a href="#create-workers-for-custom-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Polling for a task
+      Create worker(s) for CUSTOM tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create worker(s) for CUSTOM tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#poll-for-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poll for tasks
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#update-task-status" class="md-nav__link">
     <span class="md-ellipsis">
       Update task status
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -685,11 +700,11 @@
   
   
     <li class="md-nav__item">
-      <a href="client.html" class="md-nav__link">
+      <a href="start-workflow.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Using the Client
+    Starting a Workflow
   </span>
   
 
@@ -706,11 +721,11 @@
   
   
     <li class="md-nav__item">
-      <a href="start-workflow.html" class="md-nav__link">
+      <a href="client.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Starting a Workflow
+    Client SDKs
   </span>
   
 
@@ -3552,29 +3567,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#trigger-workflow-execution" class="md-nav__link">
+  <a href="#start-the-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Trigger Workflow Execution
+      Start the workflow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#polling-for-a-task" class="md-nav__link">
+  <a href="#create-workers-for-custom-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Polling for a task
+      Create worker(s) for CUSTOM tasks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create worker(s) for CUSTOM tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#poll-for-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poll for tasks
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#update-task-status" class="md-nav__link">
     <span class="md-ellipsis">
       Update task status
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3597,19 +3627,21 @@
 
 
 <h1 id="high-level-steps">High Level Steps</h1>
-<p>Steps required for a new workflow to be registered and get executed</p>
+<p>Steps required for a new workflow to be created and executed</p>
 <ol>
-<li>Define task definitions used by the workflow. </li>
-<li>Create the workflow definition</li>
-<li>Create task worker(s) that polls for scheduled tasks at regular interval</li>
+<li>Define any <code>CUSTOM</code> tasks </li>
+<li>Define a workflow</li>
+<li>Start the workflow</li>
+<li>Create worker(s) for the <code>CUSTOM</code> tasks</li>
 </ol>
-<h3 id="trigger-workflow-execution">Trigger Workflow Execution</h3>
+<h2 id="start-the-workflow">Start the workflow</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>POST /workflow/{name}
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>{
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ... //json payload as workflow input
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>}
 </code></pre></div>
-<h3 id="polling-for-a-task">Polling for a task</h3>
+<h2 id="create-workers-for-custom-tasks">Create worker(s) for <code>CUSTOM</code> tasks</h2>
+<h3 id="poll-for-tasks">Poll for tasks</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GET /tasks/poll/batch/{taskType}
 </code></pre></div>
 <h3 id="update-task-status">Update task status</h3>
@@ -3619,8 +3651,8 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        &quot;encodeResult&quot;:&quot;success&quot;,
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        &quot;location&quot;: &quot;http://cdn.example.com/file/location.png&quot;
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        //any task specific output
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>     },
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>     &quot;status&quot;: &quot;COMPLETED&quot;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    },
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    &quot;status&quot;: &quot;COMPLETED&quot;
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>}
 </code></pre></div>
 
@@ -3671,13 +3703,13 @@
         
         
           
-          <a href="client.html" class="md-footer__link md-footer__link--next" aria-label="Next: Using the Client">
+          <a href="start-workflow.html" class="md-footer__link md-footer__link--next" aria-label="Next: Starting a Workflow">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Using the Client
+                Starting a Workflow
               </div>
             </div>
             <div class="md-footer__button md-icon">

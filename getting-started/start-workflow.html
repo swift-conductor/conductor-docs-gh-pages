@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://swiftconductor.com/getting-started/start-workflow.html">
       
       
-        <link rel="prev" href="client.html">
+        <link rel="prev" href="steps.html">
       
       
-        <link rel="next" href="../devguide/concepts/index.html">
+        <link rel="next" href="client.html">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -530,7 +530,7 @@
         
   
   <span class="md-ellipsis">
-    From Source
+    Building From Source
   </span>
   
 
@@ -551,7 +551,7 @@
         
   
   <span class="md-ellipsis">
-    Using Docker
+    Running using Docker
   </span>
   
 
@@ -615,27 +615,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="client.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Using the Client
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -685,9 +664,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#start-workflow-endpoint" class="md-nav__link">
+  <a href="#workflow-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      Start Workflow Endpoint
+      Workflow Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Workflows
     </span>
   </a>
   
@@ -706,6 +694,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="client.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client SDKs
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3543,9 +3552,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#start-workflow-endpoint" class="md-nav__link">
+  <a href="#workflow-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
-      Start Workflow Endpoint
+      Workflow Endpoint
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Workflows
     </span>
   </a>
   
@@ -3579,7 +3597,7 @@
 
 
 <h1 id="starting-a-workflow">Starting a Workflow</h1>
-<h2 id="start-workflow-endpoint">Start Workflow Endpoint</h2>
+<h2 id="workflow-endpoint">Workflow Endpoint</h2>
 <p>When starting a Workflow execution with a registered definition, <code>/workflow</code> accepts following parameters:</p>
 <table>
 <thead>
@@ -3632,8 +3650,9 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Example:</strong></p>
-<p>Send a <code>POST</code> request to <code>/workflow</code> with payload like:
+<h2 id="static-workflows">Static Workflows</h2>
+<p>Static workflows must be defined before execution. You start them by passing <code>name</code> and <code>version</code> to the Conductor API.</p>
+<p>To start a predefined static workflow, send a <code>POST</code> request to <code>/workflow</code> endpoint with a payload like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;encode_and_deploy&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
@@ -3643,12 +3662,10 @@
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&quot;param2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;value2&quot;</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="dynamic-workflows">Dynamic Workflows</h2>
-<p>If the need arises to run a one-time workflow, and it doesn't make sense to register Task and Workflow definitions in Conductor Server, as it could change dynamically for each execution, dynamic workflow executions can be used.</p>
-<p>This enables you to provide a workflow definition embedded with the required task definitions to the Start Workflow Request in the <code>workflowDef</code> parameter, avoiding the need to register the blueprints before execution.</p>
-<p><strong>Example:</strong></p>
-<p>Send a <code>POST</code> request to <code>/workflow</code> with payload like:
+<p>Dynamic workflows allow you to provide the workflow definition together with the all task definitions directly in the the <code>workflowDef</code> parameter of a <code>StartWorkflowRequest</code> thus avoiding the need to create task and workflow definitions before the execution.</p>
+<p>To start a dynamic workflow, send a <code>POST</code> request to <code>/workflow</code> endpoint with a payload like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_adhoc_unregistered_workflow&quot;</span><span class="p">,</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;workflowDef&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -3693,11 +3710,7 @@
 <a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">    </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://www.google.com&quot;</span>
 <a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="p">}</span>
-</code></pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If the <code>taskDefinition</code> is defined with Metadata API, it doesn't have to be added in above dynamic workflow definition.</p>
-</div>
+</code></pre></div>
 
 
 
@@ -3729,7 +3742,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="client.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using the Client">
+          <a href="steps.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: High Level Steps">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3739,20 +3752,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Using the Client
+                High Level Steps
               </div>
             </div>
           </a>
         
         
           
-          <a href="../devguide/concepts/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+          <a href="client.html" class="md-footer__link md-footer__link--next" aria-label="Next: Client SDKs">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Introduction
+                Client SDKs
               </div>
             </div>
             <div class="md-footer__button md-icon">
