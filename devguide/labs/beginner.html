@@ -3966,10 +3966,10 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 <a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a><span class="w">    </span><span class="p">]</span>
 <a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="p">}</span>
 </code></pre></div>
-<p>Just like the task definitions, register this workflow definition by sending a POST request to <code>/workflow</code> endpoint.</p>
+<p>Just like the task definitions, register this workflow definition by sending a POST request to <code>/workflowdef</code> endpoint.</p>
 <p><strong>Example</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>curl -X POST \
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  http://localhost:8080/api/metadata/workflowdefdef \
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  http://localhost:8080/api/metadata/workflowdef \
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  -H &#39;Content-Type: application/json&#39; \
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  -d &#39;{
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    &quot;name&quot;: &quot;add_netflix_identation&quot;,
