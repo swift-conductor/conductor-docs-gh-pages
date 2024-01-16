@@ -643,6 +643,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#define-custom-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define CUSTOM task
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#start-the-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       Start the workflow
@@ -652,28 +670,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-workers-for-custom-tasks" class="md-nav__link">
+  <a href="#simulate-worker" class="md-nav__link">
     <span class="md-ellipsis">
-      Create worker(s) for CUSTOM tasks
+      Simulate worker
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Create worker(s) for CUSTOM tasks">
+    <nav class="md-nav" aria-label="Simulate worker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#poll-for-tasks" class="md-nav__link">
+  <a href="#poll-for-task" class="md-nav__link">
     <span class="md-ellipsis">
-      Poll for tasks
+      Poll for task
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-task-status" class="md-nav__link">
+  <a href="#finish-task" class="md-nav__link">
     <span class="md-ellipsis">
-      Update task status
+      Finish task
     </span>
   </a>
   
@@ -1448,6 +1466,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1511,6 +1533,48 @@
   
   <span class="md-ellipsis">
     Build a Python Task Worker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devguide/how-tos/Workers/build-a-typescript-task-worker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build a TypeScript Task Worker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devguide/how-tos/Workers/build-a-csharp-task-worker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build a C# Task Worker
   </span>
   
 
@@ -3567,6 +3631,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#define-custom-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define CUSTOM task
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#start-the-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       Start the workflow
@@ -3576,28 +3658,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-workers-for-custom-tasks" class="md-nav__link">
+  <a href="#simulate-worker" class="md-nav__link">
     <span class="md-ellipsis">
-      Create worker(s) for CUSTOM tasks
+      Simulate worker
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Create worker(s) for CUSTOM tasks">
+    <nav class="md-nav" aria-label="Simulate worker">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#poll-for-tasks" class="md-nav__link">
+  <a href="#poll-for-task" class="md-nav__link">
     <span class="md-ellipsis">
-      Poll for tasks
+      Poll for task
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-task-status" class="md-nav__link">
+  <a href="#finish-task" class="md-nav__link">
     <span class="md-ellipsis">
-      Update task status
+      Finish task
     </span>
   </a>
   
@@ -3629,31 +3711,70 @@
 <h1 id="high-level-steps">High Level Steps</h1>
 <p>Steps required for a new workflow to be created and executed</p>
 <ol>
-<li>Define any <code>CUSTOM</code> tasks </li>
-<li>Define a workflow</li>
-<li>Start the workflow</li>
-<li>Create worker(s) for the <code>CUSTOM</code> tasks</li>
+<li>Define <code>CUSTOM</code> task </li>
+<li>Define workflow</li>
+<li>Start workflow</li>
+<li>Simulate worker</li>
 </ol>
+<h2 id="define-custom-task">Define <code>CUSTOM</code> task</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>http://localhost:8080/api/metadata/taskdef<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>-d<span class="w"> </span><span class="s1">&#39;[</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s1">        {</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s1">            &quot;name&quot;: &quot;curl_custom_task&quot;,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s1">            &quot;retryCount&quot;: 3,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s1">            &quot;retryLogic&quot;: &quot;FIXED&quot;,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s1">            &quot;retryDelaySeconds&quot;: 10,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s1">            &quot;timeoutSeconds&quot;: 300,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s1">            &quot;timeoutPolicy&quot;: &quot;TIME_OUT_WF&quot;,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="s1">            &quot;responseTimeoutSeconds&quot;: 180,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="s1">            &quot;ownerEmail&quot;: &quot;type.your@email.here&quot;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="s1">        }</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="s1">    ]&#39;</span>
+</code></pre></div>
+<h2 id="define-workflow">Define workflow</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>http://localhost:8080/api/metadata/workflowdef<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s1">        &quot;name&quot;: &quot;curl_workflow&quot;,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="s1">        &quot;description&quot;: &quot;Simple 1 task workflow create via curl&quot;,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="s1">        &quot;version&quot;: 1,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="s1">        &quot;schemaVersion&quot;: 2,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="s1">        &quot;ownerEmail&quot;: &quot;type.your@email.here&quot;,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="s1">        &quot;tasks&quot;: [</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="s1">            {</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="s1">                &quot;type&quot;: &quot;CUSTOM&quot;,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="s1">                &quot;name&quot;: &quot;curl_custom_task&quot;,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="s1">                &quot;taskReferenceName&quot;: &quot;first_task&quot;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="s1">            }</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="s1">        ]</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="s1">    }&#39;</span>
+</code></pre></div>
 <h2 id="start-the-workflow">Start the workflow</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>POST /workflow/{name}
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>{
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ... //json payload as workflow input
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>http://localhost:8080/api/workflow/curl_workflow<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span>-d<span class="w"> </span><span class="s1">&#39;{}&#39;</span>
 </code></pre></div>
-<h2 id="create-workers-for-custom-tasks">Create worker(s) for <code>CUSTOM</code> tasks</h2>
-<h3 id="poll-for-tasks">Poll for tasks</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GET /task/poll/batch/{taskType}
+<h2 id="simulate-worker">Simulate worker</h2>
+<h3 id="poll-for-task">Poll for task</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span>http://localhost:8080/api/task/poll/curl_custom_task
 </code></pre></div>
-<h3 id="update-task-status">Update task status</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>POST /task
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>{
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    &quot;outputData&quot;: {
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        &quot;encodeResult&quot;:&quot;success&quot;,
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        &quot;location&quot;: &quot;http://cdn.example.com/file/location.png&quot;
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        //any task specific output
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    },
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    &quot;status&quot;: &quot;COMPLETED&quot;
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>}
+<h3 id="finish-task">Finish task</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>http://localhost:8080/api/task<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="s1">    &quot;workflowInstanceId&quot;: &quot;d90aa6af-a3d2-4946-90f8-ac5180f31fbf&quot;,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="s1">    &quot;taskId&quot;: &quot;be1609e8-82c0-49c0-973c-4c552c0e1513&quot;,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="s1">    &quot;reasonForIncompletion&quot;: &quot;&quot;,</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="s1">    &quot;callbackAfterSeconds&quot;: 0,</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="s1">    &quot;workerId&quot;: &quot;curl_worker&quot;,</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="s1">    &quot;status&quot;: &quot;COMPLETED&quot;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="s1">  }&#39;</span>
 </code></pre></div>
 
 

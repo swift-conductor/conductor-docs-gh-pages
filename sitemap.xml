@@ -86,6 +86,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://swiftconductor.com/devguide/how-tos/Workers/build-a-csharp-task-worker.html</loc>
+         <lastmod>2024-01-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workers/build-a-golang-task-worker.html</loc>
          <lastmod>2024-01-16</lastmod>
          <changefreq>daily</changefreq>
@@ -97,6 +102,11 @@
     </url>
     <url>
          <loc>https://swiftconductor.com/devguide/how-tos/Workers/build-a-python-task-worker.html</loc>
+         <lastmod>2024-01-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://swiftconductor.com/devguide/how-tos/Workers/build-a-typescript-task-worker.html</loc>
          <lastmod>2024-01-16</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -1372,6 +1372,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1506,9 +1510,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#worker-configuration-details" class="md-nav__link">
+  <a href="#worker-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker Configuration Details
+      Worker Configuration
     </span>
   </a>
   
@@ -1544,6 +1548,48 @@
   
   <span class="md-ellipsis">
     Build a Python Task Worker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="build-a-typescript-task-worker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build a TypeScript Task Worker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="build-a-csharp-task-worker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build a C# Task Worker
   </span>
   
 
@@ -3651,9 +3697,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#worker-configuration-details" class="md-nav__link">
+  <a href="#worker-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker Configuration Details
+      Worker Configuration
     </span>
   </a>
   
@@ -3739,12 +3785,12 @@
 <a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="p">}</span>
 </code></pre></div>
+<p>The <code>getTaskDefName()</code> method returns the name of the task for which this worker provides the execution logic.</p>
 <p>Worker's core implementation logic goes in the <code>execute</code> method. Upon completion, set the <code>TaskResult</code> with status as one of the following:</p>
 <ol>
 <li><strong>COMPLETED</strong>: If the task has completed successfully.</li>
 <li><strong>FAILED</strong>: If there are failures - business or system failures. Based on the task's configuration, when a task fails, it may be retried.</li>
 </ol>
-<p>The <code>getTaskDefName()</code> method returns the name of the task for which this worker provides the execution logic.</p>
 <p>See <a href="https://github.com/swift-conductor/conductor-client-java/blob/main/client/src/test/java/com/swiftconductor/conductor/client/sample/SampleWorker.java">SampleWorker.java</a> for the complete example.</p>
 <h2 id="running-workers-via-workerhost">Running Workers via WorkerHost</h2>
 <p>The <code>WorkerHost</code> can be used to register the worker(s) and initialize the polling loop.
@@ -3759,7 +3805,7 @@ It manages the task workers thread pool and server communication (poll and task 
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">threadCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">            </span>
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">Worker</span><span class="w"> </span><span class="n">worker1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SampleWorker</span><span class="p">(</span><span class="s">&quot;task_1&quot;</span><span class="p">);</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">Worker</span><span class="w"> </span><span class="n">worker2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SampleWorker</span><span class="p">(</span><span class="s">&quot;task_5&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">Worker</span><span class="w"> </span><span class="n">worker2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SampleWorker</span><span class="p">(</span><span class="s">&quot;task_2&quot;</span><span class="p">);</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
 <a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="c1">// Create WorkerHost</span>
 <a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">WorkerHost</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WorkerHost</span><span class="p">.</span><span class="na">Builder</span><span class="p">(</span><span class="n">taskClient</span><span class="p">,</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">worker1</span><span class="p">,</span><span class="w"> </span><span class="n">worker2</span><span class="p">))</span>
@@ -3770,7 +3816,7 @@ It manages the task workers thread pool and server communication (poll and task 
 <a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="n">host</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
 </code></pre></div>
 <p>See <a href="https://github.com/swift-conductor/conductor-client-java/blob/main/client/src/test/java/com/swiftconductor/conductor/client/sample/Main.java">Sample</a> for full example.</p>
-<h2 id="worker-configuration-details">Worker Configuration Details</h2>
+<h2 id="worker-configuration">Worker Configuration</h2>
 <p>Initialize the <code>Builder</code> with the following:</p>
 <table>
 <thead>

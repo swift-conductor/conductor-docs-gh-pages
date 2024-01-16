@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://swiftconductor.com/devguide/how-tos/Workers/build-a-golang-task-worker.html">
       
       
-        <link rel="prev" href="build-a-python-task-worker.html">
+        <link rel="prev" href="build-a-csharp-task-worker.html">
       
       
         <link rel="next" href="../Monitoring/Conductor-LogLevel.html">
@@ -1372,6 +1372,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1448,6 +1452,48 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="build-a-typescript-task-worker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build a TypeScript Task Worker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="build-a-csharp-task-worker.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build a C# Task Worker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1460,6 +1506,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Build a Go Task Worker
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="build-a-golang-task-worker.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1469,6 +1526,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-the-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing the Worker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementing the Worker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-worker-that-returns-a-struct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task worker that returns a struct
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-workers-via-workerhost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Workers via WorkerHost
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3494,6 +3612,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-the-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing the Worker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementing the Worker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-worker-that-returns-a-struct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Task worker that returns a struct
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-workers-via-workerhost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Workers via WorkerHost
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3511,7 +3679,59 @@
 
 
 <h1 id="build-a-go-task-worker">Build a Go Task Worker</h1>
-<p><a href="https://github.com/swift-conductor/conductor-client-golang/blob/main/docs/readme/workers.md">Writing Workers with the Go SDK</a></p>
+<h2 id="install">Install</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go<span class="w"> </span>get<span class="w"> </span>github.com/swift-conductor/conductor-client-golang
+</code></pre></div>
+<h2 id="implementing-the-worker">Implementing the Worker</h2>
+<p>To create a worker, implement the <code>WorkerTaskFunction</code> function:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">WorkerTaskFunction</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">t</span><span class="w"> </span><span class="o">*</span><span class="nx">WorkerTask</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kd">interface</span><span class="p">{},</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span>
+</code></pre></div>
+<p>Worker returns a struct as the output of the task execution.  The struct MUST be serializable to a JSON map. If an <code>error</code> is returned, the task is marked as <code>FAILED</code></p>
+<h4 id="task-worker-that-returns-a-struct">Task worker that returns a struct</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// TaskOutput struct that represents the output of the task execution</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">type</span><span class="w"> </span><span class="nx">TaskOutput</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nx">Keys</span><span class="w">    </span><span class="p">[]</span><span class="kt">string</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nx">Message</span><span class="w"> </span><span class="kt">string</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nx">Value</span><span class="w">   </span><span class="kt">float64</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">// SampleWorker function accepts Task as input and returns TaskOutput as result</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">// If there is a failure, error can be returned and the task will be marked as FAILED</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="kd">func</span><span class="w"> </span><span class="nx">SampleWorker</span><span class="p">(</span><span class="nx">t</span><span class="w"> </span><span class="o">*</span><span class="nx">model</span><span class="p">.</span><span class="nx">WorkerTask</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kd">interface</span><span class="p">{},</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nx">taskResult</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">model</span><span class="p">.</span><span class="nx">NewTaskResultFromTask</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="nx">taskResult</span><span class="p">.</span><span class="nx">Status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">model</span><span class="p">.</span><span class="nx">CompletedTask</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nx">taskResult</span><span class="p">.</span><span class="nx">OutputData</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{}{</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="s">&quot;outputKey1&quot;</span><span class="p">:</span><span class="w">  </span><span class="s">&quot;value&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="s">&quot;oddEven&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="s">&quot;mod&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">taskResult</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="p">}</span>
+</code></pre></div>
+<p>Upon completion, set the <code>TaskResult</code> with status as one of the following:</p>
+<ol>
+<li><strong>CompletedTask</strong>: If the task has completed successfully.</li>
+<li><strong>FailedTask</strong> or return error: If there are failures - business or system failures. Based on the task's configuration, when a task fails, it may be retried.</li>
+</ol>
+<h2 id="running-workers-via-workerhost">Running Workers via WorkerHost</h2>
+<p>The <code>WorkerHost</code> can be used to register the worker(s) and initialize the polling loop.
+It manages the task workers thread pool and server communication (poll and task update).</p>
+<p>The <code>taskName</code> parameter of the <code>WorkerHost.StartWorker</code> method specifies the name of the task which the worker should handle.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">httpSettings</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">settings</span><span class="p">.</span><span class="nx">NewHttpSettings</span><span class="p">(</span><span class="s">&quot;http://localhost:8080/api&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nx">apiClient</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">NewAPIClient</span><span class="p">(</span><span class="nx">httpSettings</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nx">workerHost</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">worker</span><span class="p">.</span><span class="nx">NewWorkerHostWithApiClient</span><span class="p">(</span><span class="nx">apiClient</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">// start polling for a task by name &quot;task_1&quot;, with a batch size of 1 and 1 second interval</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nx">workerHost</span><span class="p">.</span><span class="nx">StartWorker</span><span class="p">(</span><span class="s">&quot;task_1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">SampleWorker</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">*</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="nx">workerHost</span><span class="p">.</span><span class="nx">StartWorker</span><span class="p">(</span><span class="s">&quot;task_2&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">SampleWorker</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">*</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1">// block</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nx">workerHost</span><span class="p">.</span><span class="nx">WaitWorkers</span><span class="p">()</span>
+</code></pre></div>
+<p>See <a href="https://github.com/swift-conductor/conductor-client-golang/blob/main/docs/readme/workers.md">Create and run task workers</a> for additional information.</p>
 
 
 
@@ -3543,7 +3763,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="build-a-python-task-worker.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Build a Python Task Worker">
+          <a href="build-a-csharp-task-worker.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Build a C# Task Worker">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3553,7 +3773,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Build a Python Task Worker
+                Build a C# Task Worker
               </div>
             </div>
           </a>
