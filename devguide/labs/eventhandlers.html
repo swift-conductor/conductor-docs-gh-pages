@@ -3671,7 +3671,7 @@
 <li><code>test_workflow_for_eventHandler</code> which will have an <code>Event</code> task to start another workflow, and a <code>WAIT</code> System task that will be completed by an event.</li>
 <li><code>test_workflow_startedBy_eventHandler</code> which will have an <code>Event</code> task to generate an event to complete <code>WAIT</code> task in the above workflow.</li>
 </ul>
-<p>Send <code>POST</code> requests to <code>/metadata/workflow</code> endpoint with below payloads:</p>
+<p>Send <code>POST</code> requests to <code>/metadata/workflowdef</code> endpoint with below payloads:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test_workflow_for_eventHandler&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A test workflow to start another workflow with EventHandler&quot;</span><span class="p">,</span>

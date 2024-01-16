@@ -3660,7 +3660,7 @@ It can also be used with an event coming from external source such as Kafka, SQS
 <p>No parameters are required</p>
 <h2 id="completing">Completing</h2>
 <h3 id="task-update-api">Task Update API</h3>
-<p>To conclude a <code>HUMAN</code> task, the <code>POST /api/tasks</code> <a href="../api/task.html">API</a> can be used.</p>
+<p>To conclude a <code>HUMAN</code> task, the <code>POST /api/task</code> <a href="../api/task.html">API</a> can be used.</p>
 <p>You'll need to provide the<code>taskId</code>, the task status (generally <code>COMPLETED</code> or <code>FAILED</code>), and the desired task output.</p>
 <h3 id="event-handler">Event Handler</h3>
 <p>If SQS integration is enabled, the <code>HUMAN</code> task can also be resolved using the <code>/api/queue</code> API.</p>

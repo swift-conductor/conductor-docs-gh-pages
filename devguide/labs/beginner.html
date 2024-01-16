@@ -3818,7 +3818,7 @@ i.e. if the task doesn't finish execution within this time limit after transitio
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="nt">&quot;responseTimeoutSeconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">180</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
 </code></pre></div>
-<p>Send a <code>POST</code> request to <code>/metadata/taskdefs</code> endpoint to register these tasks. You can use Swagger, Postman, CURL or similar tools.</p>
+<p>Send a <code>POST</code> request to <code>/metadata/taskdef</code> endpoint to register these tasks. You can use Swagger, Postman, CURL or similar tools.</p>
 <div class="admonition info">
 <p class="admonition-title">Why is the Switch Task not registered?</p>
 <p>System Tasks that are part of control flow do not need to be registered. However, some system tasks where the retries, rate limiting and other mechanisms are required, like <code>HTTP</code> Task, are to be registered though.</p>
@@ -3829,7 +3829,7 @@ i.e. if the task doesn't finish execution within this time limit after transitio
 </div>
 <p><strong>Example</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl -X POST \
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  http://localhost:8080/api/metadata/taskdefs \
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  http://localhost:8080/api/metadata/taskdef \
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  -H &#39;Content-Type: application/json&#39; \
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  -d &#39;[
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    {
@@ -3969,7 +3969,7 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 <p>Just like the task definitions, register this workflow definition by sending a POST request to <code>/workflow</code> endpoint.</p>
 <p><strong>Example</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>curl -X POST \
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  http://localhost:8080/api/metadata/workflow \
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  http://localhost:8080/api/metadata/workflowdefdef \
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  -H &#39;Content-Type: application/json&#39; \
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  -d &#39;{
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    &quot;name&quot;: &quot;add_netflix_identation&quot;,
@@ -4048,7 +4048,7 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 <p>Send a <code>GET</code> request to <code>/poll</code> endpoint with your task type.</p>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span>http://localhost:8080/api/tasks/poll/verify_if_idents_are_added
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span>http://localhost:8080/api/task/poll/verify_if_idents_are_added
 </code></pre></div>
 <h3 id="return-response-add-logs">Return response, add logs</h3>
 <p>We can respond to Conductor with any of the following states:</p>
@@ -4057,7 +4057,7 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 <li>Task has FAILED.</li>
 <li>Call back after seconds [Process the task at a later time].</li>
 </ul>
-<p>Considering our Ident Service has verified that the Ident's are not yet added to given Content Id, let's return the task status by sending the below <code>POST</code> request to <code>/tasks</code> endpoint, with payload:</p>
+<p>Considering our Ident Service has verified that the Ident's are not yet added to given Content Id, let's return the task status by sending the below <code>POST</code> request to <code>/tass</code> endpoint, with payload:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">{</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nt">&quot;workflowInstanceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{workflowId}&quot;</span><span class="p">,</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nt">&quot;taskId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{taskId}&quot;</span><span class="p">,</span>
@@ -4072,7 +4072,7 @@ i.e The task <code>verify_if_idents_are_added</code> is wired to accept inputs f
 </code></pre></div>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span>http://localhost:8080/api/tasks<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span>http://localhost:8080/api/task<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
 <a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="s1">    &quot;workflowInstanceId&quot;: &quot;cb7c5041-aa85-4940-acb4-3bdcfa9f5c5c&quot;,</span>

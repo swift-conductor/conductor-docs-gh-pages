@@ -3598,11 +3598,11 @@ workers polling and monitoring the queue backlog.</p>
 </ol>
 <h2 id="using-apis">Using APIs</h2>
 <p>To see the size of the task queue via API:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span><span class="s1">&#39;http://localhost:8080/api/tasks/queue/sizes?taskType=&lt;TASK_NAME&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span><span class="s1">&#39;http://localhost:8080/api/task/queue/sizes?taskType=&lt;TASK_NAME&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;accept: */*&#39;</span><span class="w"> </span>
 </code></pre></div>
 <p>To see the worker poll information of the task queue via API:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl<span class="w"> </span><span class="s1">&#39;http://localhost:8080/api/tasks/queue/polldata?taskType=&lt;TASK_NAME&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>curl<span class="w"> </span><span class="s1">&#39;http://localhost:8080/api/task/queue/polldata?taskType=&lt;TASK_NAME&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;accept: */*&#39;</span>
 </code></pre></div>
 <div class="admonition note">

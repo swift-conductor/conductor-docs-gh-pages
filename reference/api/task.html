@@ -3623,19 +3623,19 @@
 </thead>
 <tbody>
 <tr>
-<td><code>GET /api/tasks/{taskId}</code></td>
+<td><code>GET /apitasks/{taskId}</code></td>
 <td>Get task details.</td>
 </tr>
 <tr>
-<td><code>GET /api/tasks/queue/all</code></td>
+<td><code>GET /api/task/queue/all</code></td>
 <td>List the pending task sizes.</td>
 </tr>
 <tr>
-<td><code>GET /api/tasks/queue/all/verbose</code></td>
+<td><code>GET /api/task/queue/all/verbose</code></td>
 <td>Same as above, includes the size per shard</td>
 </tr>
 <tr>
-<td><code>GET /api/tasks/queue/sizes?taskType=&amp;taskType=&amp;taskType</code></td>
+<td><code>GET /api/task/queue/sizes?taskType=&amp;taskType=&amp;taskType</code></td>
 <td>Return the size of pending tasks for given task types</td>
 </tr>
 <tr>
@@ -3655,15 +3655,15 @@
 </thead>
 <tbody>
 <tr>
-<td><code>GET /api/tasks/poll/{taskType}?workerid=&amp;domain=</code></td>
+<td><code>GET /api/task/poll/{taskType}?workerid=&amp;domain=</code></td>
 <td>Poll for a task. <code>workerid</code> identifies the worker that polled for the job and <code>domain</code> allows the poller to poll for a task in a specific domain</td>
 </tr>
 <tr>
-<td><code>GET /api/tasks/poll/batch/{taskType}?count=&amp;timeout=&amp;workerid=&amp;domain</code></td>
+<td><code>GET /api/task/poll/batch/{taskType}?count=&amp;timeout=&amp;workerid=&amp;domain</code></td>
 <td>Poll for a task in a batch specified by <code>count</code>.  This is a long poll and the connection will wait until <code>timeout</code> or if there is at-least 1 item available, whichever comes first.<code>workerid</code> identifies the worker that polled for the job and <code>domain</code> allows the poller to poll for a task in a specific domain</td>
 </tr>
 <tr>
-<td><code>POST /api/tasks</code></td>
+<td><code>POST /api/task</code></td>
 <td>Update the result of task execution.  See the schema below.</td>
 </tr>
 </tbody>

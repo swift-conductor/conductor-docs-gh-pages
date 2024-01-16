@@ -3741,8 +3741,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    conductor.worker.T2.domain=mydomain //Task T2 needs to poll for domain &quot;mydomain&quot;
 </code></pre></div></p>
 <h4 id="rest-call">REST call</h4>
-<p><code>GET /api/tasks/poll/batch/T2?workerid=myworker&amp;domain=mydomain</code>
-<code>GET /api/tasks/poll/T2?workerid=myworker&amp;domain=mydomain</code></p>
+<p><code>GET /api/task/poll/batch/T2?workerid=myworker&amp;domain=mydomain</code>
+<code>GET /api/task/poll/T2?workerid=myworker&amp;domain=mydomain</code></p>
 <h3 id="change-the-start-workflow-call">Change the start workflow call</h3>
 <p>When starting the workflow, make sure the task to domain mapping is passes</p>
 <h4 id="java-client_1">Java Client</h4>

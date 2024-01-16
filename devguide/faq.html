@@ -3767,9 +3767,9 @@
 <h2 id="how-long-can-a-workflow-be-in-running-state-can-i-have-a-workflow-that-keeps-running-for-days-or-months">How long can a workflow be in running state?  Can I have a workflow that keeps running for days or months?</h2>
 <p>Yes.  As long as the timeouts on the tasks are set to handle long running workflows, it will stay in running state.</p>
 <h2 id="my-workflow-fails-to-start-with-missing-task-error">My workflow fails to start with missing task error</h2>
-<p>Ensure all the tasks are registered via <code>/metadata/taskdefs</code> APIs.  Add any missing task definition (as reported in the error) and try again.</p>
+<p>Ensure all the tasks are registered via <code>/metadata/taskdef</code> APIs.  Add any missing task definition (as reported in the error) and try again.</p>
 <h2 id="where-does-my-worker-run-how-does-conductor-run-my-tasks">Where does my worker run?  How does conductor run my tasks?</h2>
-<p>Conductor does not run the workers.  When a task is scheduled, it is put into the queue maintained by Conductor.  Workers are required to poll for tasks using <code>/tasks/poll</code> API at periodic interval, execute the business logic for the task and report back the results using <code>POST /api/tasks</code> API call. 
+<p>Conductor does not run the workers.  When a task is scheduled, it is put into the queue maintained by Conductor.  Workers are required to poll for tasks using <code>/task/poll</code> API at periodic interval, execute the business logic for the task and report back the results using <code>POST /api/task</code> API call. 
 Conductor, however will run <a href="../reference/systemtasks/index.html">system tasks</a> on the Conductor server.</p>
 <h2 id="how-can-i-schedule-workflows-to-run-at-a-specific-time">How can I schedule workflows to run at a specific time?</h2>
 <p>Conductor itself does not provide any scheduling mechanism.  But there is a community project <a href="https://github.com/jas34/scheduledwf"><em>Schedule Conductor Workflows</em></a> which provides workflow scheduling capability as a pluggable module as well as workflow server.
